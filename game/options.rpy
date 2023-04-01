@@ -12,7 +12,7 @@
 ##
 ## The _() surrounding the string marks it as eligible for translation.
 
-define config.name = _("gamejamgang2")
+define config.name = _("GAME NAME HERE")
 
 
 ## Determines if the title given above is shown on the main menu screen. Set
