@@ -1,5 +1,47 @@
+<<<<<<< HEAD
 Sat Apr  1 14:14:14 2023
 Windows-10-10.0.19045
+=======
+<<<<<<< HEAD
+Sat Apr  1 14:12:38 2023
+Windows-10-10.0.19045
+Ren'Py 8.0.3.22090809
+ 
+
+Bootstrap to the start of init.init took 0.04s
+Early init took 0.00s
+Loader init took 0.02s
+Loading error handling took 0.02s
+Loading script took 0.10s
+Loading save slot metadata. took 0.00s
+Loading persistent took 0.00s
+Faled to initialize steam: FileNotFoundError("Could not find module 'D:\\renpy-8.0.3-sdk\\lib\\py3-windows-x86_64\\steam_api64.dll' (or one of its dependencies). Try using the full path with constructor syntax.")
+Running init code took 0.04s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\lesle\\AppData\\Roaming/RenPy/backups\\gamejamgang':
+Dump and make backups. took 0.04s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.01s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.28s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.04s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+=======
+Sat Apr  1 14:10:19 2023
+Windows-10-10.0.19044
+>>>>>>> d54d6821f53568318bbd542f4178b5488487eccb
 Ren'Py 8.0.3.22090809
  
 
@@ -31,7 +73,12 @@ Analyze screens took 0.00s
 Save screen analysis took 0.00s
 Prepare screens took 0.06s
 Save pyanalysis. took 0.00s
+<<<<<<< HEAD
 Save bytecode. took 0.04s
+=======
+Save bytecode. took 0.05s
+>>>>>>> refs/remotes/origin/main
+>>>>>>> d54d6821f53568318bbd542f4178b5488487eccb
 Running _start took 0.00s
 Performance test:
 Interface start took 1.03s
@@ -40,9 +87,30 @@ Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
 swap interval: 1 frames
 Windowed mode.
+<<<<<<< HEAD
 Vendor: "b'NVIDIA Corporation'"
 Renderer: b'NVIDIA GeForce RTX 2070 with Max-Q Design/PCIe/SSE2'
 Version: b'4.6.0 NVIDIA 526.56'
+=======
+<<<<<<< HEAD
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce RTX 2070 with Max-Q Design/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 512.78'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1600, 900) drawable=(1600, 900)
+Maximum texture size: 4096x4096
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.02s
+Analyze screens took 0.00s
+Prepare screens took 0.00s
+Running _start took 0.00s
+=======
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon(TM) Graphics'
+Version: b'4.6.14822 Compatibility Profile Context 20.50.26.08 27.20.15026.8004'
+>>>>>>> d54d6821f53568318bbd542f4178b5488487eccb
 Display Info: None
 Screen sizes: virtual=(1280, 720) physical=(1600, 900) drawable=(1600, 900)
 Maximum texture size: 4096x4096
@@ -60,6 +128,7 @@ While running game code:
   File "game/script.rpy", line 31, in script
     e "You've created a new Ren'Py game."
 Exception: Sayer 'e' is not defined.
+<<<<<<< HEAD
 While handling exception:
 Traceback (most recent call last):
   File "D:\renpy-8.0.3-sdk.7z\renpy-8.0.3-sdk\renpy\ast.py", line 772, in eval_who
@@ -161,3 +230,6 @@ While running game code:
   File "game/script.rpy", line 31, in script
     e "You've created a new Ren'Py game."
 Exception: Sayer 'e' is not defined.
+=======
+>>>>>>> refs/remotes/origin/main
+>>>>>>> d54d6821f53568318bbd542f4178b5488487eccb
