@@ -3,7 +3,9 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define e = Character("Eileen")
+define b = Character("Babel") #young ai servant
+define l = Character("Lucy") #rich heiress
+define k = Character("Kaine") #doctor
 
 
 # The game starts here.
@@ -14,7 +16,9 @@ label start:
     # add a file (named either "bg room.png" or "bg room.jpg") to the
     # images directory to show it.
 
-    scene bg room
+    scene bg room #this should be the ship bg 
+
+    #fade or blink transition to new bg as you look around
 
     # This shows a character sprite. A placeholder is used, but you can
     # replace it by adding a file named "eileen happy.png" to the images
