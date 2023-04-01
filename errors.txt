@@ -2,10 +2,17 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 7: invalid syntax
-    define b = Character("Babel") 
-            ^
-    
+File "game/lucia_room.rpy", line 65: menu statement expects a non-empty block.
+    menu:
+        ^
+
+File "game/lucia_room.rpy", line 67: expected statement.
+    "Exit Room.":
+                ^
+
+File "game/lucia_room.rpy", line 70: expected statement.
+    "Stay and Look Around":
+                          ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Sat Apr  1 15:22:50 2023
+Sat Apr  1 16:04:49 2023
