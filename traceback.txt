@@ -1,35 +1,22 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 31, in script
-    e "You've created a new Ren'Py game."
-  File "game/script.rpy", line 31, in script
-    e "You've created a new Ren'Py game."
-Exception: Sayer 'e' is not defined.
+  File "game/lucia_room.rpy", line 21, in script
+    babel "97%...98%...99%..."
+ValueError: unsupported format character '.' (0x2e) at index 4
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "D:\renpy-8.0.3-sdk.7z\renpy-8.0.3-sdk\renpy\bootstrap.py", line 277, in bootstrap
-    renpy.main.main()
-  File "D:\renpy-8.0.3-sdk.7z\renpy-8.0.3-sdk\renpy\main.py", line 660, in main
-    run(restart)
-  File "D:\renpy-8.0.3-sdk.7z\renpy-8.0.3-sdk\renpy\main.py", line 146, in run
-    renpy.execution.run_context(True)
-  File "D:\renpy-8.0.3-sdk.7z\renpy-8.0.3-sdk\renpy\execution.py", line 938, in run_context
-    context.run()
-  File "game/script.rpy", line 31, in script
-    e "You've created a new Ren'Py game."
-  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/site-packages/future/utils/__init__.py", line 441, in raise_
-  File "game/script.rpy", line 31, in script
-    e "You've created a new Ren'Py game."
-  File "D:\renpy-8.0.3-sdk.7z\renpy-8.0.3-sdk\renpy\ast.py", line 881, in execute
-    who = eval_who(self.who, self.who_fast)
-  File "D:\renpy-8.0.3-sdk.7z\renpy-8.0.3-sdk\renpy\ast.py", line 774, in eval_who
-    raise Exception("Sayer '%s' is not defined." % who)
-Exception: Sayer 'e' is not defined.
+  File "game/lucia_room.rpy", line 21, in script
+    babel "97%...98%...99%..."
+  File "D:\renpy-8.0.3-sdk\renpy\ast.py", line 921, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "D:\renpy-8.0.3-sdk\renpy\exports.py", line 1362, in say
+    what = what % tag_quoting_dict
+ValueError: unsupported format character '.' (0x2e) at index 4
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.0.3.22090809
 GAME NAME HERE 1.0
-Sat Apr  1 14:14:39 2023
+Sat Apr  1 15:24:13 2023

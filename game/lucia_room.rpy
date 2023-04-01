@@ -9,15 +9,16 @@ label lucia_room:
     # images directory to show it.
 
     scene bg luciaRoom # bg of lucia's room
+    #insert audio here
+    "sound stuffs listen to audio"
 
-    show babel #waking up 
+    # show babel #waking up 
+    babel "97\%...98\%...99\%..."
+    babel "Reboot complete"
 
-    # These display lines of dialogue.
+    "(Directive 1….ERROR……Directive 2….ERROR…)"
+    "(Neurolink Status: Disconnected. Fusion status…ERROR. Powersource linking to battery...)"
 
-    babel "You've created a new Ren'Py game."
-
-    babel "Once you add a story, pictures, and music, you can release it to the world!"
-
-    # This ends the game.
-
+    babel "Welcome aboard the PANDORA! Thank you for choosing us to fulfill all your luxury vacation needs. 
+    We invite you to sail with us into the future as together we explore the furthest frontiers of space and human possibility. "    
     return

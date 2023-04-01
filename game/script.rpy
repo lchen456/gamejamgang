@@ -3,9 +3,10 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define babel = Character("Babel") #young ai servant also the MC 
-define lucia = Character("Lucia") #rich heiress
-define kaine = Character("Kaine") #doctor
+init python:
+    babel = Character("Babel",  what_slow_cps=10) #young ai servant also the MC 
+    lucia = Character("Lucia") #rich heiress
+    kaine = Character("Kaine") #doctor
 
 
 # The game starts here.
@@ -30,10 +31,6 @@ label start:
     show eileen happy
 
     # These display lines of dialogue.
-
-    e "You've created a new Ren'Py game."
-
-    e "Once you add a story, pictures, and music, you can release it to the world!"
 
 
     # This ends the game.
