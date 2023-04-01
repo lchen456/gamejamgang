@@ -2,7 +2,7 @@
 
 # The game starts here.
 
-label start:
+label lucia_room:
 
     # Show a background. This uses a placeholder by default, but you can
     # add a file (named either "bg room.png" or "bg room.jpg") to the
@@ -10,17 +10,13 @@ label start:
 
     scene bg luciaRoom # bg of lucia's room
 
-    # This shows a character sprite. A placeholder is used, but you can
-    # replace it by adding a file named "eileen happy.png" to the images
-    # directory.
-
     show babel #waking up 
 
     # These display lines of dialogue.
 
-    e "You've created a new Ren'Py game."
+    babel "You've created a new Ren'Py game."
 
-    e "Once you add a story, pictures, and music, you can release it to the world!"
+    babel "Once you add a story, pictures, and music, you can release it to the world!"
 
     # This ends the game.
 
