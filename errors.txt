@@ -2,17 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/main_room.rpy", line 59: expected statement.
-    visitAud = True
-             ^
-
-File "game/main_room.rpy", line 64: expected statement.
-    visitDin = True
-             ^
-
-File "game/main_room.rpy", line 69: expected statement.
-    visitLaunch = True
-                ^
+File "game/nav_bridge.rpy", line 2: unexpected EOF while parsing
+    main song
+          ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Sun Apr  2 19:32:08 2023
+Sun Apr  2 19:37:56 2023

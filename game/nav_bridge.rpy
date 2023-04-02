@@ -1,5 +1,5 @@
 
-define main = "audio/main song.mp3"
+define main = "audio/mus_main.mp3"
 define freewill = False
 define fyourself = 0
 define cap = Character("CAPTAIN", who_bold = True) 
@@ -55,11 +55,11 @@ label nav_bridge:
      "(The geo-locator isn’t working and you don’t recognize any of the stars through the windows.)"
 
 
-     show charger
+     show charging_station
      "(There is a bot charging terminal on the control panel, but most bots aren’t allowed in the bridge.)"
      # [Dev Notes: show terminal]
      "(It probably doesn’t have any data in it.)"
-     hide charger
+     hide charging_station
      if babelSprite:
           show babel neutral
      babel "... Might as well." 
@@ -124,7 +124,7 @@ label finale:
      "(The control panel is open. Its chrome plate cover has been removed and inside is a mess of wires and buttons. 
      The Seed of Life has been set inside.)"
 
-     show seed with dissolve
+     show seed at top with dissolve
      "(Connected to it is a cylinder vial, large enough to place a brain into.)"
      hide seed
 

@@ -5,7 +5,7 @@ label launch_deck:
 
     scene launch_deck_goo
 
-    play sound "sfx_siren_muffled.mp3" fadeout 1.0
+    play sound sfx_siren_muffled fadeout 1.0
 
     "(Compared to the other rooms, the ship hangar is fairly clean.)"
 
