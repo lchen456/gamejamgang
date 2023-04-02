@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/lucia_room.rpy", line 86: end of line expected.
-    group babel_goo with fade 
-                    ^
+File "game/main_room.rpy", line 51: Line is followed by a block, despite not being a menu choice. Did you forget a colon at the end of the line?
+    "Auditorium"
+                ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Sat Apr  1 22:59:03 2023
+Sun Apr  2 00:11:23 2023

@@ -1,28 +1,26 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/main_room.rpy", line 11, in script
-    if here_before:
-  File "game/main_room.rpy", line 11, in <module>
-    if here_before:
-NameError: name 'here_before' is not defined
+  File "game/script.rpy", line 22, in script call
+    call lucia_room #start in lucia's room
+  File "game/main_room.rpy", line 58, in script
+    jump launch_deck
+ScriptError: could not find label 'launch_deck'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/main_room.rpy", line 11, in script
-    if here_before:
-  File "D:\renpy-8.0.3-sdk\renpy\ast.py", line 2115, in execute
-    if renpy.python.py_eval(condition):
-  File "D:\renpy-8.0.3-sdk\renpy\python.py", line 1092, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "D:\renpy-8.0.3-sdk\renpy\python.py", line 1085, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/main_room.rpy", line 11, in <module>
-    if here_before:
-NameError: name 'here_before' is not defined
+  File "game/script.rpy", line 22, in script call
+    call lucia_room #start in lucia's room
+  File "game/main_room.rpy", line 58, in script
+    jump launch_deck
+  File "D:\renpy-8.0.3-sdk.7z\renpy-8.0.3-sdk\renpy\ast.py", line 1974, in execute
+    rv = renpy.game.script.lookup(target)
+  File "D:\renpy-8.0.3-sdk.7z\renpy-8.0.3-sdk\renpy\script.py", line 927, in lookup
+    raise ScriptError("could not find label '%s'." % str(original))
+ScriptError: could not find label 'launch_deck'.
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.0.3.22090809
 GAME NAME HERE 1.0
-Sat Apr  1 23:29:10 2023
+Sun Apr  2 00:14:54 2023

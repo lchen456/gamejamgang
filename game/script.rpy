@@ -4,9 +4,9 @@
 # name of the character.
 
 init python:
-    babel = Character("Babel",  what_slow_cps=10) #young ai servant also the MC 
-    lucia = Character("Lucia") #rich heiress
-    kaine = Character("Kaine") #doctor
+    babel = Character("BABEL",  what_slow_cps=10) #young ai servant also the MC 
+    lucia = Character("LUCIA") #rich heiress
+    kaine = Character("KAINE") #doctor
 
 
 # The game starts here.
