@@ -361,12 +361,14 @@ label outside:
      # [Sound: breathing]
      # [Sound: heartbeat]
      play audio sfx_breathing
+     play audio sfx_heartbeat
+     play audio sfx_foosteps
      # [footsteps]
      # [Music stops]
-     # [Sound: all audio is silent]
+     stop audio 
      # [dev note: GOD ENDING Animation]
-     # [roll credits]
 
+     # [roll credits]
      jump credits
 
 label credits:

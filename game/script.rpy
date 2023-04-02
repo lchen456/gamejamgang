@@ -21,6 +21,7 @@ init python:
             credits_s += "\n{size=30}" + c[0] + "\n"
         credits_s += "{size=20}" + c[1] + "\n"
         c1=c[0]
+    credits_s += "{size=20}Backgrounds taken from royalty-free images; some sound effects taken from Apple Loops and freesound.org."
 
 # The game starts here.
 
