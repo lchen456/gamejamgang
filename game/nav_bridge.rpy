@@ -57,7 +57,6 @@ label nav_bridge:
 
      show charging_station
      "(There is a bot charging terminal on the control panel, but most bots aren’t allowed in the bridge.)"
-     # [Dev Notes: show terminal]
      "(It probably doesn’t have any data in it.)"
      hide charging_station
      if babelSprite:
@@ -140,20 +139,18 @@ label finale:
 
      show kaine_smile with dissolve
      kaine "Babel. Will you do us one last favor?"
+     hide kaine_smile
 
-     menu:
+     menu eff:
           "Yes. I am happy to be of service.":
                jump noahsark
           "Go fuck yourself.":
                # [dev notes: must click 3 times to choose option]
                if fyourself < 3:
-                    babel "(I can't say that)"
+                    jump eff
                elif fyourself == 2:
                     $ freewill = True
-                    show kaine_smile at right
-                    show lucia angry at left
                     lucia "Excuse me?"
-
                     "(Lucia gapes at you. Kaine just stares.)"
                     jump noahsark
                else:
@@ -164,45 +161,59 @@ label noahsark:
 
      "(Suddenly, there’s a loud commotion at the door. A man’s voice begins shouting.)"
 
+     show kaine_smile
      kaine "What the hell, I said we were not to be disturbed!"
 
      "(Someone bursts into the room. You can see the security guards knocked out on the floor behind him.)"
 
      kaine "Noah?"
+     hide kaine_smile
 
      "(Indeed. It’s Noah Williams. He must have used his high clearance to bypass the alarms. 
      You think his file mentioned some history with Kaine. Former research partners?)"
 
+     show noah_disgust
      noah "You."
+     hide noah_disgust
 
      "(He has a gun in hand, pointing at Kaine.)"
      "(He doesn’t look too good, but his eyes are perfectly lucid and razor focused.)"
-
+     
+     show kaine_smile with dissolve
      kaine "Don’t shoot!"
 
      "(Kaine raises both his hands up.)"
 
      kaine "I know what you want. I’ll delete it. 
      I’ll erase everything. We can take it all down from the web. We’ll make it look like we never found anything at all."
+     hide kaine_smile
 
      "(So much for humanity’s ambassador into the new age.) "
 
+     show noah_disgust
      noah "You’re a bad liar. But even if it’s the truth.."
 
      noah "Knowledge cannot be unlearned. How will we ever be satisfied with not-doing, when now we know it can be done?"
+     hide noah_disgust
 
+     show lucia angry
      lucia "We’ll pay you. How much? "
+     hide lucia angry
 
      "(Noah laughs.)"
 
      "(While he’s distracted, another guard tackles him from behind.)"
 
+     show noah_sweat
      noah "Ooof-"
+     hide noah_sweat
 
      "(He drops the gun. Kaine and Lucia pounce on the human brain.)"
 
+     show lucia angry at left
      lucia "We need to install it now. We need to find more Seeds."
-
+     
+     show kaine_smile at right
      kaine "But Babel-"
 
      lucia "There’s a maniac with a gun trying to kill us!! It’s now or never!!!"
@@ -219,6 +230,8 @@ label noahsark:
      lucia "You finish that damn thing!"
      kaine "I’M GOING AS FAST AS I CAN."
 
+     hide lucia angry 
+     hide kaine_smile
      "(Lucia dodges Noah and the guard and rushes to the door.)"
 
      "(There’s a sickening crack of bone and flesh. Noah won the fight.)"
@@ -227,9 +240,11 @@ label noahsark:
 
      "(Lucia screams.)"
 
+     show lucia angry
      lucia "BABEL!!"
 
      lucia "Babel, come with me NOW."
+     hide lucia angry
 
      "(You look at her, coiffed hair ruined and makeup smeared all over her clothes. You don’t really feel like going anywhere.)"
 
@@ -242,10 +257,14 @@ label noahsark:
 
      "(Being an ex-PANDORA executive, he should have been aware of that. Unless he wasn’t in his right mind.)"
 
+     show babel neutral
      babel "Am…pheta…mines... for sure…"
+     hide babel neutral
 
+     show noah_groan
      noah "You’ve doomed us with your existence. "
 
+     hide noah_groan
      "(You scan him calmly, ignoring the vice around your throat. His heartrate is 225BPM. 
      His irises are extremely dilated. You can think you can see wet eyelashes and the glittering of tears.)"
 
@@ -253,6 +272,7 @@ label noahsark:
 
      "(He’s at risk of cardiac arrest. You need to call for a medic.)"
 
+     show babel neutral
      babel "You…need…h-elp.."
 
      "(Your vocal cords are reinforced with carbon. They are not easily damaged, but it still hurts.)"
@@ -263,13 +283,19 @@ label noahsark:
 
      #[dev notes: add audio file thunking]
 
+     play sound sfx_thud
      babel "Not….customer… ser-"
+     stop sound
+     hide babel neutral
 
      "(He does it again)"
 
+     show babel neutral
      #[dev notes: add audio file thunking]
-
+     play sound sfx_thud
      babel "........"
+     stop sound
+     hide babel neutral
 
      "(In the distance, you see Kaine still integrating the brain and the Seed onto the control panel.)"
 
@@ -299,7 +325,7 @@ label noahsark:
      "(Some of it gets into your open mouth.)"
 
      #[dev notes: heartbeat track still going, add coughing] 
-
+     show babel neutral
      babel "COUGH COUGH COUGH COUGH"
 
      "(It’s cloying and thick. It reeks of blood.)"

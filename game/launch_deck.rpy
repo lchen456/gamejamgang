@@ -19,7 +19,7 @@ label launch_deck:
     babel "Retrieving data....."
 
     scene launch_deck_f with Fade(0.7, 2.0, 0.7, alpha=True) #clean version
-    stop audio
+    stop sound
 
     show noah_swipe with dissolve
     "(A man is crouched in the ship hangar. He’s swiping his keycard at the door lock of his ship.)"

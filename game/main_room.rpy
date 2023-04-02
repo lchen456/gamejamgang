@@ -7,6 +7,8 @@ label main_room:
 
     scene main_room_goo with Fade(0.5, 1.0, 0.5)
 
+    play music mus_main volume 0.5
+
     if here_before:
         babel "Back here again..."
         jump lobby_map
