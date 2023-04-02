@@ -50,12 +50,13 @@ label nav_bridge:
      hide babel neutral
 
      "(The geo-locator isn’t working and you don’t recognize any of the stars through the windows.)"
+
+
+     show charger
      "(There is a bot charging terminal on the control panel, but most bots aren’t allowed in the bridge.)"
-
      # [Dev Notes: show terminal]
-
      "(It probably doesn’t have any data in it.)"
-
+     hide charger
      if babelSprite:
           show babel neutral
      babel "... Might as well." 
