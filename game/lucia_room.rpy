@@ -8,12 +8,12 @@ label lucia_room:
     scene black 
     scene lucias_bedroom with Dissolve(5.0, alpha=True) # bg of lucia's room
     
-    play audio siren
+    play audio sfx_siren
     pause 2 #pause 3 seconds for sound?
 
     #babel waking up
     babel "97\%...98\%...99\%..."
-    babel "Reboot complete"
+    babel "Reboot complete."
     
     "(Directive 1….ERROR……Directive 2….ERROR…)"
     "(Neurolink Status: Disconnected. Fusion status…ERROR. Powersource linking to battery...)"
@@ -26,11 +26,11 @@ label lucia_room:
 
     "(Directive 3….ERROR….Directive 4….CONNECTED)"
     "(No lifesign visuals detected. Switching to thermo-sensors.)"
-    "(No biosignals detected..)"
+    "(No biosignals detected...)"
   
     babel "Directive 4 ARMED. Entering emergency protocol."
 
-    play audio siren
+    play audio sfx_siren
     siren "....there is an emergency reported in the building. Please proceed through the nearest exit to the launch for evacuation. 
     May I have your attention please…."
    
@@ -89,18 +89,13 @@ label lucia_room:
         #show mirror
         image mirror:
             "mirror base.png"
-            "mirror babel_goo.png" with Dissolve(5.0, alpha=True)
+            "mirror babel_goo.png" with Dissolve(3.0, alpha=True)
         
         show mirror babel_goo
         "(There’s nothing left to see here.)"
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         jump main_room
-=======
-=======
->>>>>>> refs/remotes/origin/main
+
         scene black with Dissolve(0.5, alpha =True)
         return
->>>>>>> refs/remotes/origin/main
 
