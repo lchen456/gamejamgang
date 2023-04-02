@@ -16,7 +16,7 @@ label auditorium:
     "(There’s some mucus on the walls, but it mostly pools underneath the seats.)"
 
     if babelSprite:
-        show babel neutral
+        show babel neutral with dissolve
     babel "....."
     hide babel neutral
 
@@ -25,7 +25,7 @@ label auditorium:
     "(There’s a terminal on your right-hand side. It appears to be functional.)"
 
     if babelSprite:
-        show babel neutral
+        show babel neutral with dissolve
     babel "Retrieving data..."
     hide babel neutral
 
@@ -37,7 +37,7 @@ label auditorium:
     "(You’re on the stage, and there’s a man in a suit standing over you. It takes a few seconds for your optometric rods to adjust to the spotlight.
     You are blinded by its beam.)"
     
-    show kaine_smile
+    show kaine_smile with dissolve
     kaine "Every once in a while, an invention comes along that revolutionizes everything."
 
     "(Kaine Edelweiss. My creator.)"
@@ -49,14 +49,14 @@ label auditorium:
 
     "(There’s a screen behind him depicting still images and videos of Kaine and his team.)"
 
-    show kaine_smile
+    show kaine_smile 
     kaine "Thirty years ago, we discovered the Seed of Life. I was only a deputy then. Never did I imagine that one day, 
     I would be the one leading our team into our civilization’s new panacea."
     hide kaine_smile
 
     # [Show object asset *Seed of Life*]
 
-    show kaine_smile at right
+    show kaine_smile at right with dissolve
     kaine "Please allow me to introduce..."
 
     "(He gestures towards you.)"
@@ -73,7 +73,7 @@ label auditorium:
     hide kaine_smile
 
     if babelSprite:
-        show babel neutral
+        show babel neutral with dissolve
     babel "Hello, world."
     hide babel neutral
 
@@ -99,7 +99,7 @@ label auditorium:
     "(The investors love you. One in particular eyes you from a high VIP seat.)"
     hide babel neutral
     stop audio
-    show kaine_smile
+    show kaine_smile with dissolve
     kaine "Modern science has been a journey into the unknown, with a lesson in humility waiting at every stop. But in the face of such cosmic challenges, 
     humanity has endured. Not only have we survived, we have defied all expectations to become a space-faring civilization." 
 
@@ -113,7 +113,7 @@ label auditorium:
     # [dev visuals: bg fades to black]
     # [dev visuals: transition to SCENE A1 (bg still black)]
 
-    scene black with Dissolve(0.5, alpha = True)
+    scene black with Fade(0.7, 2.0, 0.5)
     stop audio fadeout 0.5
     jump scene_a1
     
@@ -121,8 +121,8 @@ label auditorium:
 
 #scene A1: auditorium backstage/lab
 label scene_a1:
-    scene black
-    scene research_room_f with Dissolve(0.7, alpha = True)
+
+    scene research_room_f
 
     lt "(hissing) The tadpoles started uncontrollably growing at the accelerated pace– even ones that weren’t in the room. 
     Hell, some of them weren’t even in the same building!"

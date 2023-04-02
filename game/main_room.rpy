@@ -6,7 +6,7 @@ define nav_key = False
 
 label main_room:
 
-    scene main_room_goo with Dissolve(10.0, alpha=True)
+    scene main_room_goo with Fade(0.5, 1.0, 0.5)
 
     if here_before:
         babel "Back here again..."
