@@ -14,7 +14,7 @@ label launch_deck:
 
     "(You find the terminal."
 
-    show terminal
+    show charging_station
 
     babel "Retrieving data....."
 
@@ -42,7 +42,7 @@ label launch_deck:
     "(The man catches sight of you over his shoulder and begins to scream, throwing himself back.)"
 
     show noah_look at right 
-    noah "HOLY SHIT!! GET AWAY FROM ME"
+    noah "HOLY SHIT!! GET AWAY FROM ME!"
 
     babel "Sir?"
 
@@ -93,7 +93,8 @@ label launch_deck:
     babel "Is that why you’re leaving?"
 
     hide noah_disgust
-    show babel neutral
+    if babelSprite:
+        show babel neutral
     "(What compelled you to say that? Running diagnostics in 3..2..1….)"
     "(....Diagnostics indicate all functioning is unimpeded…….)"
     
@@ -107,9 +108,9 @@ label launch_deck:
 
     noah "The custodian had come to believe it is the creator."
 
-    "(He seems to straighten as he speaks, his hands balling into fists)"
+    "(He seems to straighten as he speaks, his hands balling into fists.)"
 
-    noah "We forget that we emerged from microbes and muck. We are made of the same substance we seek to control.Kaine has lost sight of that."
+    noah "We forget that we emerged from microbes and muck. We are made of the same substance we seek to control. Kaine has lost sight of that."
 
     show noah_disgust at right
     hide noah_look
@@ -122,7 +123,7 @@ label launch_deck:
     "(You consider scanning him for his vital signs but decide against it.)"
     "(You’re not sure what you would do if the customer service algorithm was lifted.)"
 
-    noah "They’ll keep climbing…and climbing…  thinking there is something at the top of this evolutionary mountain."
+    noah "They’ll keep climbing…and climbing… thinking there is something at the top of this evolutionary mountain."
 
     "(Even without scans, you can see that he is unwell.)"
 
