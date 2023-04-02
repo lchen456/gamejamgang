@@ -6,7 +6,7 @@ define nav_key = 0
 
 label main_room:
 
-    scene main_room_goo with Dissolve(10.0, alpha=True)
+    scene main_room_goo with Fade(0.5, 1.0, 0.5)
 
     if here_before:
         babel "Back here again..."
@@ -17,8 +17,9 @@ label main_room:
     "(The moment you step inside, you’re knee deep in goo.)"
     "(It’s everywhere, dripping down the grand staircase and even stuck on the ceiling.)"
 
-    if babelSprite == True: 
-        show babel neutral
+
+    if babelSprite: 
+        show babel neutral 
     babel "There are no users here."
     babel "Reboot complete."
     hide babel neutral
@@ -32,14 +33,14 @@ label main_room:
     "(There may be data inside the terminals that can help you to contact HQ for a rescue operation.)"
     hide charging_station 
 
-    if babelSprite == True: 
+    if babelSprite: 
         show babel neutral
     babel "Retainer 6626068 reporting in new Priority." 
     babel "Priority #3: Retrieve data from all functional charging terminals. "
     hide babel neutral
 
     "(You approach an information desk with a map of the vessel.)"
-    if babelSprite == True: 
+    if babelSprite: 
         show babel neutral
     babel "Scanning PANDORA diagram…" 
     hide babel neutral
