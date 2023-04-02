@@ -117,3 +117,39 @@ Version: b'4.6.0 NVIDIA 526.56'
 Display Info: None
 Screen sizes: virtual=(1280, 720) physical=(1600, 900) drawable=(1600, 900)
 Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/script.rpy", line 22, in script call
+    call lucia_room #start in lucia's room
+  File "game/main_room.rpy", line 52, in script
+    jump auditorium
+  File "D:\renpy-8.0.3-sdk.7z\renpy-8.0.3-sdk\renpy\ast.py", line 1974, in execute
+    rv = renpy.game.script.lookup(target)
+  File "D:\renpy-8.0.3-sdk.7z\renpy-8.0.3-sdk\renpy\script.py", line 927, in lookup
+    raise ScriptError("could not find label '%s'." % str(original))
+ScriptError: could not find label 'auditorium'.
+
+While running game code:
+  File "game/script.rpy", line 22, in script call
+    call lucia_room #start in lucia's room
+  File "game/main_room.rpy", line 52, in script
+    jump auditorium
+ScriptError: could not find label 'auditorium'.
+
+Full traceback:
+  File "game/script.rpy", line 22, in script call
+    call lucia_room #start in lucia's room
+  File "game/main_room.rpy", line 58, in script
+    jump launch_deck
+  File "D:\renpy-8.0.3-sdk.7z\renpy-8.0.3-sdk\renpy\ast.py", line 1974, in execute
+    rv = renpy.game.script.lookup(target)
+  File "D:\renpy-8.0.3-sdk.7z\renpy-8.0.3-sdk\renpy\script.py", line 927, in lookup
+    raise ScriptError("could not find label '%s'." % str(original))
+ScriptError: could not find label 'launch_deck'.
+
+While running game code:
+  File "game/script.rpy", line 22, in script call
+    call lucia_room #start in lucia's room
+  File "game/main_room.rpy", line 58, in script
+    jump launch_deck
+ScriptError: could not find label 'launch_deck'.

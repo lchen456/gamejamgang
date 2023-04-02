@@ -1,6 +1,7 @@
 ﻿# main hub that the character returns to after every memory
 
 define here_before = False
+define visited = ()
 
 label main_room:
 
@@ -43,9 +44,8 @@ label main_room:
 
     label lobby_map: 
         show map
-        # $ visited = []
         menu:
-            # set visited
+            set visited
             "Which door should I enter?"
 
             "Auditorium":
@@ -59,9 +59,6 @@ label main_room:
 
             "Navigation Bridge":
                 jump nav_bridge
-
-            "Lucia's Room":
-                jump lucia_room
 
 
             # "Door 3" if "Door 1" in visited and "Door 2" in visited and "Door3" not in visited:
