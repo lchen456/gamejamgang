@@ -1,22 +1,5 @@
 #launch deck
 
-#https://www.reddit.com/r/RenPy/comments/udej2l/how_do_i_make_a_sprite_jump/
-transform jumper: #adjust the yoffset as necessary to your preference
-    ease .06 yoffset 24 
-    ease .06 yoffset -24 
-    ease .05 yoffset 20 
-    ease .05 yoffset -20 
-    ease .04 yoffset 16 
-    ease .04 yoffset -16 
-    ease .03 yoffset 12 
-    ease .03 yoffset -12 
-    ease .02 yoffset 8 
-    ease .02 yoffset -8 
-    ease .01 yoffset 4 
-    ease .01 yoffset -4 
-    ease .01 yoffset 0
-
-
 #scene C:
 label launch_deck:
 
@@ -44,21 +27,27 @@ label launch_deck:
 
     babel "Excuse me-"
     hide noah_swipe
-    show noah_look at jumper
-    pause
-    pause
-    return
-        # xpos 0.88 ypos 1.28 xanchor 0.5 yanchor 1.0 zoom 0.5
 
-    
+    #jump: https://lemmasoft.renai.us/forums/viewtopic.php?t=26172
+    show noah_look:
+        xpos 0.35  ypos 0
+        yoffset 0
+        easein 0.05 yoffset -60
+        easeout 0.05 yoffset 0
+        easein 0.05 yoffset -30
+        easeout 0.05 yoffset 0
+        easein 0.05 yoffset -4
+        easeout 0.05 yoffset 0
+    pause 
     "(The man catches sight of you over his shoulder and begins to scream, throwing himself back.)"
 
+    show noah_look at right 
     noah "HOLY SHIT!! GET AWAY FROM ME"
 
     babel "Sir?"
 
-    show noah_cover zoom .5  
-    hide noah_look
+    show noah_cover at right 
+    hide noah_look 
     "(He shields his face from you with his arm, backing himself up against the ship.)"
 
     babel "Is everything all right? How may I be of service?"
@@ -67,7 +56,7 @@ label launch_deck:
 
     "(He doesn’t appear to be in enough danger for you to override your customer service protocol.)"
 
-    show noah_groan with fade 
+    show noah_groan at right
     hide noah_cover
     "(Suddenly, he throws a hand over his forehead and groans in pain.)"
 
@@ -79,7 +68,7 @@ label launch_deck:
 
     babel "Can I help you?"
 
-    show noah_disgust with fade
+    show noah_disgust at right
     hide noah_groan
     noah "No." 
 
@@ -103,11 +92,15 @@ label launch_deck:
 
     babel "Is that why you’re leaving?"
 
+    hide noah_disgust
+    show babel neutral
     "(What compelled you to say that? Running diagnostics in 3..2..1….)"
     "(....Diagnostics indicate all functioning is unimpeded…….)"
-
+    
     babel "........"
+    hide babel neutral
 
+    show noah_look at right
     noah "No. I am leaving because PANDORA and I no longer have shared goals."
 
     noah "Mankind is compelled to project our nature onto the world. We, in our arrogance, think of ourselves as a great work worthy of superimposing a deity."
@@ -118,6 +111,8 @@ label launch_deck:
 
     noah "We forget that we emerged from microbes and muck. We are made of the same substance we seek to control.Kaine has lost sight of that."
 
+    show noah_disgust at right
+    hide noah_look
     noah "That bastard synonymizes knowledge with moral superiority. He thinks himself merciful for the most basic of decencies."
 
     "(His face scrunches up in a complex emotion.)"
@@ -132,16 +127,14 @@ label launch_deck:
     "(Even without scans, you can see that he is unwell.)"
 
     noah "But they are all wrong. The shape of life is not a pyramid."
-
-    show noah swipe:
-        ease .5 zoom 1.5 xoffset 100 yoffset 50 #moves right 100px, bottom 50px. set to 0 when you return later.
-
-    show noah_sweat with fade
     hide noah_disgust
+    show noah_sweat with fade:
+        ease .1 zoom 1.5 xoffset 300 yoffset 50
+    
     "(He’s gasping for breath, sweat dripping down his chin.)"
 
     noah "It’s a circle."
 
     noah "Push too far, and you’ll end right where you started."
 
-    return with fade 
+    jump main_room

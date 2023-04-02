@@ -92,5 +92,5 @@ label lucia_room:
         show mirror babel_goo
         "(There’s nothing left to see here.)"
 
-        return
+        jump main_room
 
