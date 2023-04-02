@@ -4,19 +4,26 @@ define lt = Character("LAB TECH", who_bold = True)
 #scene A:
 label auditorium:
 
-    scene auditorium_goo #image of auditorium with goo
+    scene auditorium_goo
     
-    # bg is auditorium (goo version)
     # Sound: no siren.
 
     "(You can’t hear the siren anymore. This room is soundproof.)"
     "(There’s some mucus on the walls, but it mostly pools underneath the seats.)"
 
+    if babelSprite == True:
+        show babel neutral
     babel "....."
+    hide babel neutral
+
+    #SHOW TERMINAL HERE
 
     "(There’s a terminal on your right-hand side. It appears to be functional.)"
 
+    if babelSprite == True:
+        show babel neutral
     babel "Retrieving data..."
+    hide babel neutral
 
     scene stagelights with Dissolve(0.7, alpha = True) #clean version
         
@@ -24,13 +31,81 @@ label auditorium:
 
     "(You’re on the stage, and there’s a man in a suit standing over you. It takes a few seconds for your optometric rods to adjust to the spotlight.
     You are blinded by its beam.)"
+    
+    show kaine_smile
+    kaine "Every once in a while, an invention comes along that revolutionizes everything."
 
-    #KAINE  
+    "(Kaine Edelweiss. My creator.)"
 
+    kaine "The wheel. The steam engine. Nuclear fission. The Theory of Evolution."
+    kaine "This is a moment that I have been awaiting for fifteen years, because today….I have been blessed with the honor to present to you such a discovery."
+    hide kaine_smile
+
+    "(There’s a screen behind him depicting still images and videos of Kaine and his team.)"
+
+    show kaine_smile
+    kaine "Thirty years ago, we discovered the Seed of Life. I was only a deputy then. Never did I imagine that one day, 
+    I would be the one leading our team into our civilization’s new panacea."
+    hide kaine_smile
+
+    # [Show object asset *Seed of Life*]
+
+    show kaine_smile at right
+    kaine "Please allow me to introduce..."
+
+    "(He gestures towards you.)"
+
+    kaine "Babel." 
+
+    "(Kaine leans down and gestures towards you.)"
+
+    kaine "Come here, my boy. Step into the light."
+
+    "(You take his hand and walk forward, downstage.)"
+
+    kaine "I’m sure you must be thinking ‘Yet another AI assistant?’, but I assure you– Babel is much more than that." 
+
+    if babelSprite == True:
+        show babel neutral
+    babel "Hello, world."
+    hide babel neutral
+
+    show kaine_smile
+    "(Kaine chuckles at that.)"
+
+    kaine "A private joke between us."
+    kaine "Tell us about yourself, Babel."
+    hide kaine_smile
+    
+    "(The audience is enraptured with you.)"
+
+    if babelSprite == True:
+        show babel neutral
+    babel "My name is Babel. I am a semi-artificial intelligence developed from biohybrid tissue using the Seed of Life." 
+
+    "(The audience explodes into hushed whispers. Could it be? Have humans finally created a being with sentience? Have humans created life?)"
+
+    "(The demonstration continues. Kaine opens the discussion to the audience and you answer questions about all sorts of subjects. Famous artists. History. 
+    The Fibonacci sequence.)"
+
+    "(The investors love you. One in particular eyes you from a high VIP seat.)"
+
+    kaine "Modern science has been a journey into the unknown, with a lesson in humility waiting at every stop. But in the face of such cosmic challenges, 
+    humanity has endured. Not only have we survived, we have defied all expectations to become a space-faring civilization." 
+
+    kaine "The cosmos will not conquer us. Because we are the cosmos. We are the stuff of stars. This world belongs to us."
+
+    kaine "The future belongs to us!"
+
+    "(The audience explodes into thunderous applause.)"
+
+    # [dev visuals: bg fades to black]
+
+    # [dev visuals: transition to SCENE A1 (bg still black)]
+
+    scene black with Dissolve(0.5, alpha = True)
     jump scene_a1
     
-    "AWOOGA"
-
     return 
 
 #scene A1: auditorium backstage/lab
