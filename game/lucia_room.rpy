@@ -5,7 +5,8 @@
 label lucia_room:
 
     #SCENE 1
-    scene lucias_bedroom # bg of lucia's room
+    scene black 
+    scene lucias_bedroom with Dissolve(5.0, alpha=True) # bg of lucia's room
     #insert audio here
     pause 2 #pause 3 seconds for sound?
 
