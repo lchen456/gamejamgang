@@ -5,7 +5,8 @@
 label lucia_room:
 
     #SCENE 1
-    scene lucias_bedroom # bg of lucia's room
+    scene black 
+    scene lucias_bedroom with Dissolve(5.0, alpha=True) # bg of lucia's room
     #insert audio here
     pause 2 #pause 3 seconds for sound?
 
@@ -65,9 +66,9 @@ label lucia_room:
             jump main_room
 
         "Stay and Look Around":
-            jump lucia_room_stay
+            jump .lucia_room_stay
 
-    label lucia_room_stay:
+    label .lucia_room_stay:
         #SCENE 1.5
 
         #port window image here?
@@ -90,6 +91,4 @@ label lucia_room:
         "(There’s nothing left to see here.)"
 
         return
-        
-    return
 

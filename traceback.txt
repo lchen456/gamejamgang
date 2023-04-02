@@ -1,26 +1,28 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 22, in script call
-    call lucia_room #start in lucia's room
-  File "game/main_room.rpy", line 58, in script
-    jump launch_deck
-ScriptError: could not find label 'launch_deck'.
+  File "game/lucia_room.rpy", line 9, in script
+    scene lucias_bedroom with Dissolve # bg of lucia's room
+Exception: Expected transition to be a displayable, not a <partial <class 'renpy.display.transition.Dissolve'> () {'old_widget': <renpy.display.layout.Fixed object at 0x0000000005b22f70>, 'new_widget': <renpy.display.layout.Fixed object at 0x000000000531df40>}>
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 22, in script call
-    call lucia_room #start in lucia's room
-  File "game/main_room.rpy", line 58, in script
-    jump launch_deck
-  File "D:\renpy-8.0.3-sdk.7z\renpy-8.0.3-sdk\renpy\ast.py", line 1974, in execute
-    rv = renpy.game.script.lookup(target)
-  File "D:\renpy-8.0.3-sdk.7z\renpy-8.0.3-sdk\renpy\script.py", line 927, in lookup
-    raise ScriptError("could not find label '%s'." % str(original))
-ScriptError: could not find label 'launch_deck'.
+  File "game/lucia_room.rpy", line 9, in script
+    scene lucias_bedroom with Dissolve # bg of lucia's room
+  File "D:\renpy-8.0.3-sdk\renpy\ast.py", line 1658, in execute
+    renpy.exports.with_statement(trans, paired=paired)
+  File "D:\renpy-8.0.3-sdk\renpy\exports.py", line 1657, in with_statement
+    return renpy.game.interface.do_with(trans, paired, clear=clear)
+  File "D:\renpy-8.0.3-sdk\renpy\display\core.py", line 2798, in do_with
+    return self.interact(trans_pause=True,
+  File "D:\renpy-8.0.3-sdk\renpy\display\core.py", line 3377, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "D:\renpy-8.0.3-sdk\renpy\display\core.py", line 3757, in interact_core
+    raise Exception("Expected transition to be a displayable, not a %r" % trans)
+Exception: Expected transition to be a displayable, not a <partial <class 'renpy.display.transition.Dissolve'> () {'old_widget': <renpy.display.layout.Fixed object at 0x0000000005b22f70>, 'new_widget': <renpy.display.layout.Fixed object at 0x000000000531df40>}>
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.0.3.22090809
 GAME NAME HERE 1.0
-Sun Apr  2 00:14:54 2023
+Sun Apr  2 00:30:15 2023

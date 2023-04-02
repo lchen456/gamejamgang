@@ -3,6 +3,7 @@
 define here_before = False
 define visited = ()
 
+
 label main_room:
 
     scene bg lobby 
