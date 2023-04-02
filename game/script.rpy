@@ -10,7 +10,7 @@ init python:
     kaine = Character("KAINE", who_bold = True) #doctor
     noah = Character("NOAH", who_bold = True) #teacher
     babelSprite = False
-    siren = Character("SIREN", who_bold = True)
+    s = Character("SIREN", who_bold = True)
 
     visitAud = False
     visitDin = False
@@ -25,6 +25,7 @@ init python:
             credits_s += "\n{size=30}" + c[0] + "\n"
         credits_s += "{size=20}" + c[1] + "\n"
         c1=c[0]
+    credits_s += "{size=20}Backgrounds taken from royalty-free images; some sound effects taken from Apple Loops and freesound.org."
 
 # The game starts here.
 

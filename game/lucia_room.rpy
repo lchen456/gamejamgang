@@ -1,14 +1,14 @@
 # The script of the game goes in this file.
 
 # The game starts here.
-define siren = "siren.mp3"
+define audio.siren = "audio/sfx_siren.mp3"
 
 label lucia_room:
     #SCENE 1
     scene black 
     scene lucias_bedroom with Dissolve(5.0, alpha=True) # bg of lucia's room
     
-    play audio sfx_siren
+    play sound sfx_siren volume 0.25
     pause 2 #pause 3 seconds for sound?
 
     #babel waking up
@@ -16,12 +16,14 @@ label lucia_room:
     babel "Reboot complete."
     
     "(Directive 1….ERROR……Directive 2….ERROR…)"
+    stop sound
+
     "(Neurolink Status: Disconnected. Fusion status…ERROR. Powersource linking to battery...)"
 
     babel "Welcome aboard the PANDORA! Thank you for choosing us to fulfill all your luxury vacation needs. 
     We invite you to sail with us into the future as together we explore the furthest frontiers of space and human possibility. "  
 
-    #sound here
+    play sound sfx_jingle
     pause 2 
 
     "(Directive 3….ERROR….Directive 4….CONNECTED)"
@@ -30,8 +32,8 @@ label lucia_room:
   
     babel "Directive 4 ARMED. Entering emergency protocol."
 
-    play audio sfx_siren
-    siren "....there is an emergency reported in the building. Please proceed through the nearest exit to the launch for evacuation. 
+    play sound siren volume 0.25
+    s "....there is an emergency reported in the building. Please proceed through the nearest exit to the launch for evacuation. 
     May I have your attention please…."
    
     babel "?"
@@ -60,7 +62,7 @@ label lucia_room:
     "(There is no sign of violence or damage to the master chamber aside from the contaminant.)"
 
     #SOUND HERE
-    stop audio fadeout 1.0
+    stop sound fadeout 1.0
     pause 2
 
     menu scene_1_end:
@@ -93,8 +95,6 @@ label lucia_room:
         
         show mirror babel_goo
         "(There’s nothing left to see here.)"
-
-        jump main_room
 
         scene black with Dissolve(0.5, alpha =True)
         return
