@@ -6,8 +6,8 @@
 init python:
 
     babel = Character("BABEL",  what_slow_cps=10, who_bold= True) #young ai servant also the MC 
-    lucia = Character("LUCIA") #rich heiress
-    kaine = Character("KAINE") #doctor
+    lucia = Character("LUCIA", who_bold = True) #rich heiress
+    kaine = Character("KAINE", who_bold = True) #doctor
 
 
 # The game starts here.

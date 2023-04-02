@@ -1,7 +1,7 @@
 ﻿# main hub that the character returns to after every memory
 
 define here_before = False
-define visited = ()
+define visited = []
 
 
 label main_room:

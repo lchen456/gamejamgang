@@ -1,8 +1,8 @@
 #auditorium room
 
-define lt = Character("LAB TECH")
+define lt = Character("LAB TECH", who_bold = True)
 #scene A:
-label scene_a:
+label auditorium:
 
     scene auditorium_goo #image of auditorium with goo
     
@@ -18,14 +18,20 @@ label scene_a:
 
     babel "Retrieving data..."
 
-    scene auditorium with Dissolve(0.7, alpha) #clean version
+    scene auditorium with Dissolve(0.7, alpha = True) #clean version
         
     "(The audience applauds uproariously.)"
 
     "(You’re on the stage, and there’s a man in a suit standing over you. It takes a few seconds for your optometric rods to adjust to the spotlight.
     You are blinded by its beam.)"
 
-    kaine 
+    #KAINE  
+
+    jump scene_a1
+    
+    "AWOOGA"
+
+    return 
 
 #scene A1: auditorium backstage/lab
 label scene_a1:
@@ -55,9 +61,11 @@ label scene_a1:
     kaine "Babel. How do you feel about your life?"
 
     #SHOW “CHOICE”
-    menu:
-        "I am grateful to be alive. It is my joy and pleasure to live and to serve."
-        "I am grateful to be alive. It is my joy and pleasure to live and to serve."
+    menu choice:
+        "I am grateful to be alive. It is my joy and pleasure to live and to serve.":
+            pass
+        "I am grateful to be alive. It is my joy and pleasure to live and to serve.":
+            pass
     #END “CHOICE”
     
     kaine "See?"
@@ -88,3 +96,5 @@ label scene_a1:
     "(Perhaps she should have been.)"
 
     kaine "And you will get the fuck back to work." 
+    
+    return 
