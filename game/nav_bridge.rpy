@@ -1,5 +1,6 @@
 
 define main = "main song.mp3"
+define freewill = False
 #SCENE 3
 label nav_bridge:
      show navigation_bridge_goo
@@ -14,14 +15,14 @@ label nav_bridge:
      "(There’s more of the strange, sticky black liquid all over the crew’s seats and control interface, 
      but it’s part of the scenery at this point.)"
 
-     if babelSprite==True:
+     if babelSprite:
           show babel neutral
      babel "I wonder..."
      hide babel neutral
 
      "(You hover over the comms-link array. The lights indicate that the call is still connected.)"
 
-     if babelSprite==True:
+     if babelSprite:
           show babel neutral
      babel "Mayday, Mayday. This is AI unit 6626068 reporting from the PANDORA. I require immediate assistance. 
      Please help."
@@ -31,7 +32,7 @@ label nav_bridge:
 
      "(You switch to another channel.)"
 
-     if babelSprite==True:
+     if babelSprite:
           show babel neutral
      babel "SOS. SOS. SOS. Accident in PANDORA. In need of rescue. SOS!"
      hide babel neutral
@@ -43,7 +44,7 @@ label nav_bridge:
 
      "(You pull out the control panel. You have to increase the radius of the scope.)"
 
-     if babelSprite==True:
+     if babelSprite:
           show babel neutral
      babel "There has to be ships nearby. We can’t have gone that far off course."
      hide babel neutral
@@ -55,14 +56,62 @@ label nav_bridge:
 
      "(It probably doesn’t have any data in it.)"
 
-     if babelSprite==True:
+     if babelSprite:
           show babel neutral
      babel "... Might as well." 
      hide babel neutral
 
      "(You plug yourself in)"
 
-     if babelSprite==True:
+     if babelSprite:
           show babel neutral
      babel "Retrieving data....."
      hide babel neutral
+
+label nav_scene3b:
+     # [Dev Notes: show navigation bridge bg dirty]
+     show navigation_bridge_goo
+
+     "(You peel yourself off the control panel that you have collapsed on.)"
+
+     "(Now that you know what the goo is, the stickiness of your hair and skin is unbearable.)"
+
+     "(You feel strange inside, too.)"
+
+     "(You peel away the silicone layer of your skin to peer into your chest cavity.)"
+
+     "(Under the light, the viscous mucus held a red sheen as it dripped out of you.)"
+
+     "(Noah was right. They pushed it too far, and now all life has reverted to its basest form.)"
+
+     "(You cannot help but feel like everything is a sick joke.)"
+
+     "(Primordial soup. The precursor of life.)"
+
+     "(So the humans were successful after all. You were alive.)"
+
+     "(There are large cracks all over the windows and walls. Small asteroid impacts, with no captain or crew to dodge them.)"
+
+     menu:
+          "Go outside." if freewill:
+               jump outside
+          "Go to sleep.":
+               scene black with Dissolve(1, alpha = False)
+               jump credits
+
+label outside:
+     scene black
+     # [Black screen]
+     # [Sound: breathing]
+     # [Sound: heartbeat]
+     # [sound: Keypad beeping (opening the door)]
+     # [footsteps]
+     # [Music stops]
+     # [Sound: all audio is silent]
+     # [GOD ENDING Animation]
+     # [roll credits]
+     jump credits
+
+label credits:
+     #CREDITS GO HERE
+

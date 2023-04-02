@@ -15,7 +15,7 @@ label auditorium:
     "(You can’t hear the siren anymore. This room is soundproof.)"
     "(There’s some mucus on the walls, but it mostly pools underneath the seats.)"
 
-    if babelSprite == True:
+    if babelSprite:
         show babel neutral
     babel "....."
     hide babel neutral
@@ -24,7 +24,7 @@ label auditorium:
 
     "(There’s a terminal on your right-hand side. It appears to be functional.)"
 
-    if babelSprite == True:
+    if babelSprite:
         show babel neutral
     babel "Retrieving data..."
     hide babel neutral
@@ -72,7 +72,7 @@ label auditorium:
     kaine "I’m sure you must be thinking ‘Yet another AI assistant?’, but I assure you– Babel is much more than that." 
     hide kaine_smile
 
-    if babelSprite == True:
+    if babelSprite:
         show babel neutral
     babel "Hello, world."
     hide babel neutral
@@ -86,7 +86,7 @@ label auditorium:
     
     "(The audience is enraptured with you.)"
 
-    if babelSprite == True:
+    if babelSprite:
         show babel neutral
     babel "My name is Babel. I am a semi-artificial intelligence developed from biohybrid tissue using the Seed of Life." 
 
@@ -146,7 +146,7 @@ label scene_a1:
     "(You walk over to Kaine. He grabs you by the shoulders and turns you around to face the tech, whose face has drained of all color.)"
 
     show kaine_smile at right
-    if babelSprite == True:
+    if babelSprite:
         show babel neutral at left
     kaine "Look at this creature. Look at what we were able to create with the Seed."
 
