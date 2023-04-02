@@ -10,12 +10,17 @@ label lucia_room:
     
     play sound sfx_siren volume 0.25
     pause 2 #pause 3 seconds for sound?
+    s "	SIREN: May I have your attention please...
+    May I have your attention please. 
+    There is an emergency reported in the building. 
+    Please proceed through the nearest exit to the launch pad for evacuation. 
+    May I have your attention please…."
 
     #babel waking up
     babel "97\%...98\%...99\%..."
     babel "Reboot complete."
     
-    "(Directive 1….ERROR……Directive 2….ERROR…)"
+    "(Directive 1.....ERROR.....Directive 2...ERROR...)"
     stop sound
 
     "(Neurolink Status: Disconnected. Fusion status…ERROR. Powersource linking to battery...)"
@@ -32,7 +37,9 @@ label lucia_room:
   
     babel "Directive 4 ARMED. Entering emergency protocol."
 
+    "(New Directive: Locate all remaining users and await instructions. Customer service algorithm terminated.)"
     play sound siren volume 0.25
+
     s "....there is an emergency reported in the building. Please proceed through the nearest exit to the launch for evacuation. 
     May I have your attention please…."
    
@@ -48,6 +55,8 @@ label lucia_room:
     "(The joints in your body are also covered in the same viscous substance. Your movements are slightly impaired.)"
     "(Thermal scans indicate the substance has a temperature of 323.15 Kelvins. The air temperature is 174 Kelvins. 
     Life support systems must be inoperational.)"
+
+    "(Centrifugal acceleration is at 334 Gal – one-third of Earth’s gravity. The centrifugal drive system is operating below capacity.)"
 
     babel "Priority #1: Rescue. Locate and save possible survivors."
 
