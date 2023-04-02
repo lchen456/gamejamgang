@@ -4,7 +4,6 @@
 define siren = "siren.mp3"
 
 label lucia_room:
-
     #SCENE 1
     scene black 
     scene lucias_bedroom with Dissolve(5.0, alpha=True) # bg of lucia's room
@@ -30,10 +29,9 @@ label lucia_room:
     "(No biosignals detected..)"
   
     babel "Directive 4 ARMED. Entering emergency protocol."
-    hide babel neutral
 
     play audio siren
-    "SIREN:....there is an emergency reported in the building. Please proceed through the nearest exit to the launch for evacuation. 
+    siren "....there is an emergency reported in the building. Please proceed through the nearest exit to the launch for evacuation. 
     May I have your attention please…."
    
     babel "?"
