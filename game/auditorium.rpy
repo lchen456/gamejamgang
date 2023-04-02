@@ -18,7 +18,7 @@ label auditorium:
 
     babel "Retrieving data..."
 
-    scene auditorium with Dissolve(0.7, alpha = True) #clean version
+    scene stagelights with Dissolve(0.7, alpha = True) #clean version
         
     "(The audience applauds uproariously.)"
 
@@ -35,6 +35,8 @@ label auditorium:
 
 #scene A1: auditorium backstage/lab
 label scene_a1:
+    scene research_room_f with Dissolve(0.7, alpha = True)
+
     lt "(hissing) The tadpoles started uncontrollably growing at the accelerated pace– even ones that weren’t in the room. 
     Hell, some of them weren’t even in the same building!"
 
@@ -96,5 +98,6 @@ label scene_a1:
     "(Perhaps she should have been.)"
 
     kaine "And you will get the fuck back to work." 
-    
-    return 
+
+    jump main_room
+ 

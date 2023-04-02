@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 renpy.alpha renpy.geometry renpy.texture
 renpy.solid
 renpy.geometry renpy.texture
@@ -10,3 +11,31 @@ renpy.texture
 >>>>>>> refs/remotes/origin/main
 renpy.geometry renpy.solid
 renpy.ftl
+=======
+<<<<<<< HEAD
+renpy.texture
+renpy.alpha renpy.geometry renpy.texture
+renpy.solid
+renpy.ftl
+renpy.geometry renpy.solid
+renpy.geometry renpy.texture
+renpy.alpha renpy.texture
+<<<<<<< HEAD
+renpy.dissolve renpy.dissolve
+=======
+renpy.dissolve renpy.geometry
+=======
+renpy.geometry renpy.texture
+<<<<<<< HEAD
+renpy.alpha renpy.texture
+renpy.solid
+renpy.dissolve renpy.geometry
+renpy.geometry renpy.solid
+renpy.texture
+=======
+renpy.alpha renpy.geometry renpy.texture
+renpy.ftl
+renpy.dissolve renpy.dissolve
+>>>>>>> refs/remotes/origin/main
+>>>>>>> refs/remotes/origin/main
+>>>>>>> b6bff36b1ba9f6ad7a1b8cb4eccdc35c4de3a0fa
