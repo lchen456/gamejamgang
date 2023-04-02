@@ -63,14 +63,17 @@ label lucia_room:
 
     menu scene_1_end:
         "Exit Room.":
-            jump main_room
+            #babel's sprite does not show up
+            return
 
         "Stay and Look Around":
+            #if babel sees himself in mirror, sprite appears for rest of game, else not
             jump .lucia_room_stay
 
     label .lucia_room_stay:
         #SCENE 1.5
-
+        
+        $ babelSprite = True
         #port window image here?
         "(You look out the port window. Pinpoints of light twinkle in the vast, dark void. They do not match any constellations in your database.)"
 
@@ -87,7 +90,6 @@ label lucia_room:
             "mirror babel_goo.png" with Dissolve(5.0, alpha=True)
         
         show mirror babel_goo
-        pause 2
         "(There’s nothing left to see here.)"
 
         return

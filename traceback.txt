@@ -1,22 +1,22 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/auditorium.rpy", line 99, in script
-    return
-Exception: Could not find return label ('game/script.rpy', 1680406002, 4).
+  File "game/main_room.rpy", line 56, in script
+    jump dining_hall
+ScriptError: could not find label 'dining_hall'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/auditorium.rpy", line 99, in script
-    return
-  File "D:\renpy-8.0.3-sdk\renpy\ast.py", line 1782, in execute
-    next_node(renpy.game.context().lookup_return(pop=True))
-  File "D:\renpy-8.0.3-sdk\renpy\execution.py", line 726, in lookup_return
-    raise Exception("Could not find return label {!r}.".format(self.return_stack[-1]))
-Exception: Could not find return label ('game/script.rpy', 1680406002, 4).
+  File "game/main_room.rpy", line 56, in script
+    jump dining_hall
+  File "D:\renpy-8.0.3-sdk\renpy\ast.py", line 1974, in execute
+    rv = renpy.game.script.lookup(target)
+  File "D:\renpy-8.0.3-sdk\renpy\script.py", line 927, in lookup
+    raise ScriptError("could not find label '%s'." % str(original))
+ScriptError: could not find label 'dining_hall'.
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.0.3.22090809
 GAME NAME HERE 1.0
-Sun Apr  2 01:21:37 2023
+Sun Apr  2 01:33:50 2023
