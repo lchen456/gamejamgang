@@ -105,12 +105,13 @@ label outside:
      # [Black screen]
      # [Sound: breathing]
      # [Sound: heartbeat]
-     # [sound: Keypad beeping (opening the door)]
+     play audio sfx_breathing
      # [footsteps]
      # [Music stops]
      # [Sound: all audio is silent]
-     # [GOD ENDING Animation]
+     # [dev note: GOD ENDING Animation]
      # [roll credits]
+
      jump credits
 
 label credits:
