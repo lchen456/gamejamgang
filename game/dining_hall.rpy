@@ -27,36 +27,48 @@ label dining_hall:
 
     lucia "I assure you, the pleasure is all mine!"
 
-    hide lucia laugh with dissolve
+    hide lucia laugh
 
     "(Lucia gestures to the lavish hall. You are all sitting at the head of the ornate mahogany table.)"
     "(Everyone has a plate in front of them but no one is eating, too busy with photographs and light rings.)"
 
-    show lucia smirk with dissolve
+    show lucia smirk
 
     lucia "Welcome to the PANDORA!"
     lucia "And today, I have got–"
 
     "(Lucia takes your arm and winks at the camera.)"
 
+    if babelSprite:
+        show babel neutral at left
+        show lucia laugh at right
     show lucia laugh
     
     lucia "Everyone’s favorite AI companion with me!!"
 
     "(She pulls you up into her lap and arranges you like a doll.)"
 
+    if babelSprite:
+        show babel neutral at left
+        show lucia smirk at right
     show lucia smirk
 
     "Babel’s a major part of my life here– the best part, if I’m being honest."
 
     cw "Your companion was gifted to you by PANDORA as a part of your contract, correct?"
 
+    if babelSprite:
+        show babel neutral at left
+        show lucia laugh at right
     show lucia laugh
 
     lucia "Yes! We wanted to raise awareness about Babel, and show people what a boon he can be for humanity."
 
     cw "That sounds magnificent. Could you tell us more about Babel and his story?"
 
+    if babelSprite:
+        show babel neutral at left
+        show lucia smirk at right
     show lucia smirk
 
     lucia "Babel here was developed from a Seed. The Seed of Life, I mean. We haven’t found another one yet, but our hypothesis is that they exist. For decades, we’ve been working hard to figure out how to create one."
@@ -66,7 +78,9 @@ label dining_hall:
     lucia "Well you know, I’m something of a scientist myself. I’ve spent my whole life investing in tech. Very successfully, I might add."
     lucia "Babel has done miracles for PANDORA. He’s made miracles with my viewership, too."
 
-    hide lucia smirk with dissolve
+    hide lucia smirk
+    if babelSprite:
+        hide babel neutral
 
     "(There are some chuckles from the sycophants.)"
 
@@ -80,7 +94,7 @@ label dining_hall:
 
     cw "Wow!! How endearing."
 
-    show lucia smirk with dissolve
+    show lucia smirk
 
     cw "Lucia, you’re very brave to come all the way out here to raise funds for astrobiology. You’re a trailblazer for all of us."
 
@@ -105,11 +119,11 @@ label dining_hall:
 
     lucia "It’s like uh, um; related to the growth of your brain cells. Anyways, you wouldn’t understand, and it would take me much too long to teach."
 
-    hide lucia angry with dissolve
+    hide lucia angry
 
     "(Lucia waves her hand vaguely in the air.)"
 
-    show lucia smirk with dissolve
+    show lucia smirk
     
     lucia "We’ve basically figured out that the Seed can accelerate evolution. Fortunately, we were able to plot a projection of the growth, so we pushed it forward, a sort of– forced evolution. Babel is, in a way, a more evolved version of us."
 
@@ -122,13 +136,13 @@ label dining_hall:
     lucia "That’s why I’m still here."
     lucia "{b}The real evolution is yet to come.{/b}"
 
-    hide lucia smirk with dissolve
+    hide lucia smirk
 
     cw "That sounds amazing. You can give Babel a friend!"
 
     "(Lucia laughs.)"
 
-    show lucia laugh with dissolve
+    show lucia laugh
 
     lucia "Hahaha, yes! Next time I’ll ask them to make a girl. We’ll have a complete set!"
 

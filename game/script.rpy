@@ -8,6 +8,7 @@ init python:
     babel = Character("BABEL",  what_slow_cps=15, who_bold= True) #young ai servant also the MC 
     lucia = Character("LUCIA", who_bold = True) #rich heiress
     kaine = Character("KAINE", who_bold = True) #doctor
+    noah = Character("NOAH", who_bold = True) #teacher
     babelSprite = False
     siren = Character("SIREN", who_bold = True)
 

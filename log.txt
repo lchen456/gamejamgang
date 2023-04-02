@@ -1,8 +1,32 @@
+<<<<<<< HEAD
 Sun Apr  2 18:24:38 2023
+=======
+<<<<<<< HEAD
+Sun Apr  2 17:49:40 2023
+=======
+Sun Apr  2 16:48:48 2023
+>>>>>>> refs/remotes/origin/main
+>>>>>>> refs/remotes/origin/main
 Windows-10-10.0.19045
 Ren'Py 8.0.3.22090809
  
 
+<<<<<<< HEAD
+Bootstrap to the start of init.init took 0.05s
+Early init took 0.01s
+Loader init took 0.03s
+Loading error handling took 0.02s
+Loading script took 0.17s
+Loading save slot metadata. took 0.03s
+Loading persistent took 0.00s
+Faled to initialize steam: FileNotFoundError("Could not find module 'D:\\renpy-8.0.3-sdk.7z\\renpy-8.0.3-sdk\\lib\\py3-windows-x86_64\\steam_api64.dll' (or one of its dependencies). Try using the full path with constructor syntax.")
+Running init code took 0.05s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\tchen\\AppData\\Roaming/RenPy/backups\\GameJamGang':
+Dump and make backups. took 0.06s
+=======
 Bootstrap to the start of init.init took 0.04s
 Early init took 0.00s
 Loader init took 0.02s
@@ -10,6 +34,7 @@ Loading error handling took 0.02s
 Loading script took 0.13s
 Loading save slot metadata. took 0.02s
 Loading persistent took 0.00s
+<<<<<<< HEAD
 
 File "game/nav_bridge.rpy", line 133: end of line expected.
     show splash behind cred with dissolve with Pause(3)
@@ -63,6 +88,50 @@ Save bytecode. took 0.02s
 Running _start took 0.00s
 Performance test:
 Interface start took 0.03s
+=======
+Faled to initialize steam: FileNotFoundError("Could not find module 'D:\\renpy-8.0.3-sdk\\lib\\py3-windows-x86_64\\steam_api64.dll' (or one of its dependencies). Try using the full path with constructor syntax.")
+Running init code took 0.04s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Dump and make backups. took 0.04s
+>>>>>>> refs/remotes/origin/main
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.02s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+<<<<<<< HEAD
+Creating interface object took 0.54s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.01s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.02s
+Prepare screens took 0.06s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.04s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.63s
+=======
+Creating interface object took 0.38s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.02s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.11s
+>>>>>>> refs/remotes/origin/main
+>>>>>>> refs/remotes/origin/main
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)

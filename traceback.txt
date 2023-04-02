@@ -1,15 +1,34 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
+<<<<<<< HEAD
 While loading <renpy.display.im.Image object ('images/Company-Logo.png') at 0x0000000005734340>:
   File "game/script.rpy", line 33, in script call
     call lucia_room #start in lucia's room
   File "game/nav_bridge.rpy", line 151, in script
     with dissolve
 OSError: Couldn't find file 'images/Company-Logo.png'.
+=======
+While running game code:
+<<<<<<< HEAD
+<<<<<<< HEAD
+  File "game/main_room.rpy", line 68, in script call
+    call launch_deck
+  File "game/launch_deck.rpy", line 40, in script
+    show noah_cover zoom .5
+Exception: Image 'noah_cover' does not accept attributes 'zoom .5'.
+=======
+=======
+>>>>>>> refs/remotes/origin/main
+  File "game/main_room.rpy", line 67, in script
+    jump launch_deck
+ScriptError: could not find label 'launch_deck'.
+>>>>>>> refs/remotes/origin/main
+>>>>>>> refs/remotes/origin/main
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
+<<<<<<< HEAD
   File "game/script.rpy", line 33, in script call
     call lucia_room #start in lucia's room
   File "game/nav_bridge.rpy", line 151, in script
@@ -65,8 +84,52 @@ Full traceback:
   File "D:\renpy-8.0.3-sdk\renpy\loader.py", line 820, in load
     raise IOError("Couldn't find file '%s'." % name)
 OSError: Couldn't find file 'images/Company-Logo.png'.
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  File "game/main_room.rpy", line 68, in script call
+    call launch_deck
+  File "game/launch_deck.rpy", line 40, in script
+    show noah_cover zoom .5
+  File "D:\renpy-8.0.3-sdk.7z\renpy-8.0.3-sdk\renpy\ast.py", line 1408, in execute
+    show_imspec(self.imspec, atl=getattr(self, "atl", None))
+  File "D:\renpy-8.0.3-sdk.7z\renpy-8.0.3-sdk\renpy\ast.py", line 1371, in show_imspec
+    renpy.config.show(name,
+  File "D:\renpy-8.0.3-sdk.7z\renpy-8.0.3-sdk\renpy\exports.py", line 686, in show
+    if not base.find_target() and renpy.config.missing_show:
+  File "D:\renpy-8.0.3-sdk.7z\renpy-8.0.3-sdk\renpy\display\image.py", line 414, in find_target
+    self.target = target._duplicate(a)
+  File "D:\renpy-8.0.3-sdk.7z\renpy-8.0.3-sdk\renpy\display\core.py", line 397, in _duplicate
+    args.extraneous()
+  File "D:\renpy-8.0.3-sdk.7z\renpy-8.0.3-sdk\renpy\display\core.py", line 265, in extraneous
+    raise Exception("Image '{}' does not accept attributes '{}'.".format(
+Exception: Image 'noah_cover' does not accept attributes 'zoom .5'.
+=======
+=======
+>>>>>>> refs/remotes/origin/main
+  File "game/main_room.rpy", line 67, in script
+    jump launch_deck
+  File "D:\renpy-8.0.3-sdk\renpy\ast.py", line 1974, in execute
+    rv = renpy.game.script.lookup(target)
+  File "D:\renpy-8.0.3-sdk\renpy\script.py", line 927, in lookup
+    raise ScriptError("could not find label '%s'." % str(original))
+ScriptError: could not find label 'launch_deck'.
+>>>>>>> refs/remotes/origin/main
+>>>>>>> refs/remotes/origin/main
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.0.3.22090809
 GAME NAME HERE 1.0
+<<<<<<< HEAD
 Sun Apr  2 17:30:09 2023
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+Sun Apr  2 16:49:49 2023
+=======
+Sun Apr  2 16:40:14 2023
+>>>>>>> refs/remotes/origin/main
+=======
+Sun Apr  2 16:40:14 2023
+>>>>>>> refs/remotes/origin/main
+>>>>>>> refs/remotes/origin/main

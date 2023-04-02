@@ -2,9 +2,36 @@
 errors listed below, and try again.
 
 
+<<<<<<< HEAD
 File "game/nav_bridge.rpy", line 133: end of line expected.
     show splash behind cred with dissolve with Pause(3)
                                           ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
 Sun Apr  2 18:24:39 2023
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+File "game/launch_deck.rpy", line 44: expected 'simple_expression' not found.
+    easeout 0.1 yoffset 
+                        ^
+
+Ren'Py Version: Ren'Py 8.0.3.22090809
+Sun Apr  2 17:35:22 2023
+=======
+File "game/nav_bridge.rpy", line 70: expected ':' not found.
+    label nav_scene3b
+                     ^
+
+Ren'Py Version: Ren'Py 8.0.3.22090809
+Sun Apr  2 15:47:51 2023
+>>>>>>> refs/remotes/origin/main
+=======
+File "game/nav_bridge.rpy", line 70: expected ':' not found.
+    label nav_scene3b
+                     ^
+
+Ren'Py Version: Ren'Py 8.0.3.22090809
+Sun Apr  2 15:47:51 2023
+>>>>>>> refs/remotes/origin/main
+>>>>>>> refs/remotes/origin/main
