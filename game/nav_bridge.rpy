@@ -1,5 +1,5 @@
 
-define main = "main song.mp3"
+define main = "audio/main song.mp3"
 define freewill = False
 #SCENE 3
 label nav_bridge:
@@ -115,4 +115,26 @@ label outside:
 
 label credits:
      #CREDITS GO HERE
+     #scrolling credits effect credit DaFool, leon, modified by rabcor, with some edits
+     play music main 
+     scene black
 
+     image logo = "logo.png"
+     image splash = "mirror babel_goo.png" 
+     image cred = Text(credits_s, text_align=0.5)
+
+     $ credits_speed = 25 #scrolling speed in seconds
+
+     show logo with Fade(0.5, 0.7, 0.5) 
+     pause 5.0
+     hide logo with dissolve
+     show cred at Move((0.5, 2.0), (0.5, 0.0), credits_speed, repeat=False, bounce=False, xanchor="center", yanchor="bottom")
+     with Pause(credits_speed - 5)
+     show splash behind cred with dissolve 
+     with Pause(5)
+
+     stop music fadeout 0.5
+
+     show text "Thank you"
+     return
+     
