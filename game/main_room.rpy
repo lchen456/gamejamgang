@@ -2,7 +2,7 @@
 
 define here_before = False
 define visited = []
-
+define nav_key = False
 
 label main_room:
 
@@ -59,10 +59,9 @@ label main_room:
                 jump launch_deck
 
             "Navigation Bridge":
-                jump nav_bridge
+                if not nav_key:
+                    babel "I don't have the authorization to enter this room"
+                else: 
+                    jump nav_bridge
 
-
-            # "Door 3" if "Door 1" in visited and "Door 2" in visited and "Door3" not in visited:
-            #     jump door_3
-
-    # if all doors visited, do something here
+    # if all doors visited, do something here 

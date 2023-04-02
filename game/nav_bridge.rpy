@@ -1,4 +1,6 @@
 
 
 label nav_bridge:
-     show navigation_bridge 
+     show bridge
+
+     "testing" 
