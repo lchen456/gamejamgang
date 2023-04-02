@@ -6,11 +6,14 @@ define nav_key = False
 
 label main_room:
 
-    scene bg lobby 
+    scene main_room_goo with Dissolve(10.0, alpha=True)
+
+    if here_before:
+        babel "Back here again..."
+        jump lobby_map
 
     #SCENE 2
     # knee deep in goo
-    show goo 
     "(The moment you step inside, you’re knee deep in goo.)"
     "(It’s everywhere, dripping down the grand staircase and even stuck on the ceiling.)"
 
@@ -47,11 +50,6 @@ label main_room:
 
     jump lobby_map
 
-    # These display lines of dialogue.
-    if here_before:
-        babel "Back here again..."
-        jump lobby_map
-
     label lobby_map: 
         show map
         menu:
@@ -72,5 +70,3 @@ label main_room:
                     babel "I don't have the authorization to enter this room"
                 else: 
                     jump nav_bridge
-
-    # if all doors visited, do something here 

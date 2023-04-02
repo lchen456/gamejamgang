@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 renpy.texture
 renpy.alpha renpy.geometry renpy.texture
 renpy.solid
@@ -9,4 +10,17 @@ renpy.alpha renpy.texture
 renpy.dissolve renpy.dissolve
 =======
 renpy.dissolve renpy.geometry
+=======
+renpy.geometry renpy.texture
+<<<<<<< HEAD
+renpy.alpha renpy.texture
+renpy.solid
+renpy.dissolve renpy.geometry
+renpy.geometry renpy.solid
+renpy.texture
+=======
+renpy.alpha renpy.geometry renpy.texture
+renpy.ftl
+renpy.dissolve renpy.dissolve
+>>>>>>> refs/remotes/origin/main
 >>>>>>> refs/remotes/origin/main
