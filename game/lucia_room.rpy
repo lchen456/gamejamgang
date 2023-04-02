@@ -2,7 +2,7 @@
 
 # The game starts here.
 
-label lucia_room:
+label luc:
 
     #SCENE 1
     scene black 
