@@ -4,19 +4,15 @@
 
 label lucia_room:
 
-    # Show a background. This uses a placeholder by default, but you can
-    # add a file (named either "bg room.png" or "bg room.jpg") to the
-    # images directory to show it.
-
-    scene bg luciaRoom # bg of lucia's room
+    #SCENE 1
+    scene lucias_bedroom # bg of lucia's room
     #insert audio here
-    "sound stuffs listen to audio"
-    pause 3 #pause 3 seconds for sound?
+    pause 2 #pause 3 seconds for sound?
 
-    # show babel #waking up 
+    #babel waking up
     babel "97\%...98\%...99\%..."
     babel "Reboot complete"
-
+    
     "(Directive 1….ERROR……Directive 2….ERROR…)"
     "(Neurolink Status: Disconnected. Fusion status…ERROR. Powersource linking to battery...)"
 
@@ -31,9 +27,11 @@ label lucia_room:
     "(No biosignals detected..)"
   
     babel "Directive 4 ARMED. Entering emergency protocol."
+    hide babel neutral
+
     "SIREN:....there is an emergency reported in the building. Please proceed through the nearest exit to the launch for evacuation. 
     May I have your attention please…."
-    
+   
     babel "?"
 
     "(Running memory scan…No data files in memory drive detected.)"
@@ -64,10 +62,34 @@ label lucia_room:
 
     menu scene_1_end:
         "Exit Room.":
-            "stuff here"
+            jump main_room
 
         "Stay and Look Around":
-            #$ drank_tea = True
-            "stuff here 2"
+            jump lucia_room_stay
 
+    label lucia_room_stay:
+        #SCENE 1.5
+
+        #port window image here?
+        "(You look out the port window. Pinpoints of light twinkle in the vast, dark void. They do not match any constellations in your database.)"
+
+        babel "There are multiple pieces of furniture inside this chamber. Cataloging now…. Bed, Sofa, Sofa #2, Dresser, Dresser #2, Dresser #3, Vanity, Holoscreen, Mirror."
+
+        scene black
+        show mirror base
+        pause 1
+        show mirror
+        "(The mirror is a vintage artifact from the pre-lightspeed era. It does not require fusion energy to function. You can see your reflection in it.)"
+        #show mirror
+        image mirror:
+            "mirror base.png"
+            "mirror babel_goo.png" with Dissolve(5.0, alpha=True)
+        
+        show mirror babel_goo
+        pause 2
+        "(There’s nothing left to see here.)"
+
+        return
+        
     return
+
