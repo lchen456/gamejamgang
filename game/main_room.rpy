@@ -1,7 +1,6 @@
 ﻿# main hub that the character returns to after every memory
 
 define here_before = False
-define visited = []
 define nav_key = 0
 
 label main_room:
@@ -54,23 +53,26 @@ label main_room:
     label lobby_map: 
         show map
         menu:
-            set visited
             "Which door should I enter?"
 
-            "Auditorium":
+            "Auditorium" if not visitAud:
+                visitAud = True
                 call auditorium
                 $ nav_key += 1
 
-            "Dining Hall":
+            "Dining Hall" if not visitDin:
+                visitDin = True
                 call dining_hall
                 $ nav_key += 1
 
-            "Launch Deck":
+            "Launch Deck" if not visitLaunch:
+                visitLaunch = True
                 call launch_deck
                 $ nav_key += 1
 
             "Navigation Bridge":
                 if nav_key < 3:
                     babel "I don't have the authorization to enter this room"
-                else: 
+                    jump lobby_map
+                if nav_key == 3: 
                     jump nav_bridge

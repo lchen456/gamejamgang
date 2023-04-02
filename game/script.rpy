@@ -12,6 +12,10 @@ init python:
     babelSprite = False
     s = Character("SIREN", who_bold = True)
 
+    visitAud = False
+    visitDin = False
+    visitLaunch = False
+
     credits = ('Prima Sun', 'scenario'), ('Prima Sun', 'writing'),('Tiffany Chen', 'programming'), ('Tiffany Chen', 'sprites'), ('Lesley Chen', 'programming'), ('Lesley Chen', 'sprites'), ('Alex Ouyang', 'programming'), ('Alex Ouyang', 'backgrounds'), ('Eddie Jones', 'music'), ('Eddie Jones', 'sound design')
 
     credits_s = "{size=60} Credits\n"
@@ -30,8 +34,6 @@ label start:
     # Show a background. This uses a placeholder by default, but you can
     # add a file (named either "bg room.png" or "bg room.jpg") to the
     # images directory to show it.
-
-    scene bg room #this should be the ship bg 
 
     call lucia_room #start in lucia's room 
     #fade or blink transition to new bg as you look around
