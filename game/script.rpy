@@ -10,7 +10,7 @@ init python:
     kaine = Character("KAINE", who_bold = True) #doctor
     noah = Character("NOAH", who_bold = True) #teacher
     babelSprite = False
-    siren = Character("SIREN", who_bold = True)
+    s = Character("SIREN", who_bold = True)
 
     credits = ('Prima Sun', 'scenario'), ('Prima Sun', 'writing'),('Tiffany Chen', 'programming'), ('Tiffany Chen', 'sprites'), ('Lesley Chen', 'programming'), ('Lesley Chen', 'sprites'), ('Alex Ouyang', 'programming'), ('Alex Ouyang', 'backgrounds'), ('Eddie Jones', 'music'), ('Eddie Jones', 'sound design')
 

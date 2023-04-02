@@ -1,7 +1,7 @@
 # The script of the game goes in this file.
 
 # The game starts here.
-define siren = "siren.mp3"
+define audio.siren = "audio/sfx_siren.mp3"
 
 label lucia_room:
     #SCENE 1
@@ -31,7 +31,7 @@ label lucia_room:
     babel "Directive 4 ARMED. Entering emergency protocol."
 
     play audio siren
-    siren "....there is an emergency reported in the building. Please proceed through the nearest exit to the launch for evacuation. 
+    s "....there is an emergency reported in the building. Please proceed through the nearest exit to the launch for evacuation. 
     May I have your attention please…."
    
     babel "?"
@@ -94,13 +94,6 @@ label lucia_room:
         show mirror babel_goo
         "(There’s nothing left to see here.)"
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-        jump main_room
-=======
-=======
->>>>>>> refs/remotes/origin/main
         scene black with Dissolve(0.5, alpha =True)
         return
->>>>>>> refs/remotes/origin/main
 
