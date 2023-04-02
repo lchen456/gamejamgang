@@ -4,7 +4,8 @@
 label launch_deck:
 
     scene launch_deck_goo
-    # play sound "muted siren"
+
+    play sound "sfx_siren_muffled.mp3" fadeout 1.0
 
     "(Compared to the other rooms, the ship hangar is fairly clean.)"
 
@@ -15,10 +16,10 @@ label launch_deck:
     "(You find the terminal."
 
     show charging_station
-
     babel "Retrieving data....."
 
-    scene launch_deck_f with Dissolve(0.7, alpha = True) #clean version
+    scene launch_deck_f with Fade(0.7, 2.0, 0.7, alpha=True) #clean version
+    stop audio
 
     show noah_swipe with dissolve
     "(A man is crouched in the ship hangar. He’s swiping his keycard at the door lock of his ship.)"
@@ -42,7 +43,7 @@ label launch_deck:
     "(The man catches sight of you over his shoulder and begins to scream, throwing himself back.)"
 
     show noah_look at right 
-    noah "HOLY SHIT!! GET AWAY FROM ME!"
+    noah "HOLY SHIT!! GET AWAY FROM ME"
 
     babel "Sir?"
 
@@ -62,7 +63,7 @@ label launch_deck:
 
     noah "My head..."
 
-    "(Running a database scan…..User Identity confirmed.)"
+    "(Running a database scan...User Identity confirmed.)"
 
     "(Noah Williams. A retired PANDORA executive who resigned a few months ago. He has multiple degrees in astrobiology and plans to teach at a university when we return to Earth.)"
 
@@ -71,19 +72,21 @@ label launch_deck:
     show noah_disgust at right
     hide noah_groan
     noah "No." 
-
     noah "I don’t want to be anywhere near you. You disgust me."
 
     babel "Thank you for your feedback. I’m sorry to hear your experience on the PANDORA has been less than stellar."
 
     noah "Jesus." 
-
     "(The user takes another moment to look you up and down. His gaze is different from the others somehow.)"
 
-    noah "You’re a monument to our depravity."
+   
+    noah "I feel sorry for you."
+    noah "You’re a monument to our depravity." 
 
+    show babel neutral at left with fade    
     "(You cock your head questioningly)"
-
+    hide babel neutral 
+    
     noah "Humans. The depravity of humans."
 
     noah "They find a beautiful thing, and indubitably the first thing they do is enslave it."
@@ -93,8 +96,7 @@ label launch_deck:
     babel "Is that why you’re leaving?"
 
     hide noah_disgust
-    if babelSprite:
-        show babel neutral
+    show babel neutral
     "(What compelled you to say that? Running diagnostics in 3..2..1….)"
     "(....Diagnostics indicate all functioning is unimpeded…….)"
     
@@ -108,9 +110,9 @@ label launch_deck:
 
     noah "The custodian had come to believe it is the creator."
 
-    "(He seems to straighten as he speaks, his hands balling into fists.)"
+    "(He seems to straighten as he speaks, his hands balling into fists)"
 
-    noah "We forget that we emerged from microbes and muck. We are made of the same substance we seek to control. Kaine has lost sight of that."
+    noah "Kaine forgets that we emerged from microbes and muck. We are made of the same substance we seek to control."
 
     show noah_disgust at right
     hide noah_look
@@ -118,12 +120,12 @@ label launch_deck:
 
     "(His face scrunches up in a complex emotion.)"
 
-    noah "Now that you exist, they won’t ever stop."
+    noah "Now that you're a success', they won’t ever stop."
 
     "(You consider scanning him for his vital signs but decide against it.)"
     "(You’re not sure what you would do if the customer service algorithm was lifted.)"
 
-    noah "They’ll keep climbing…and climbing… thinking there is something at the top of this evolutionary mountain."
+    noah "They’ll keep climbing...and climbing...thinking there is something at the top of this evolutionary mountain."
 
     "(Even without scans, you can see that he is unwell.)"
 
