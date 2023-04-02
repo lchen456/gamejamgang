@@ -65,9 +65,9 @@ label lucia_room:
             jump main_room
 
         "Stay and Look Around":
-            jump lucia_room_stay
+            jump .lucia_room_stay
 
-    label lucia_room_stay:
+    label .lucia_room_stay:
         #SCENE 1.5
 
         #port window image here?
@@ -90,6 +90,4 @@ label lucia_room:
         "(There’s nothing left to see here.)"
 
         return
-        
-    return
 

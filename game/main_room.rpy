@@ -1,5 +1,7 @@
 ﻿# main hub that the character returns to after every memory
 
+define here_before = False
+
 label main_room:
 
     scene bg room
@@ -9,7 +11,8 @@ label main_room:
 
     # These display lines of dialogue.
     if here_before:
-        b "Back here again..."
+        babel "Back here again..."
+
 
     $ visited = []
     menu:

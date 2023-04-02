@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/lucia_room.rpy", line 86: end of line expected.
-    group babel_goo with fade 
-                    ^
+File "game/main_room.rpy", line 10: expected statement.
+    here_before = True
+                ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Sat Apr  1 22:59:03 2023
+Sat Apr  1 23:42:23 2023

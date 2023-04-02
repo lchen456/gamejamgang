@@ -1,28 +1,22 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/main_room.rpy", line 11, in script
-    if here_before:
-  File "game/main_room.rpy", line 11, in <module>
-    if here_before:
-NameError: name 'here_before' is not defined
+  File "game/main_room.rpy", line 14, in script
+    b "Back here again..."
+Exception: Sayer 'b' is not defined.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/main_room.rpy", line 11, in script
-    if here_before:
-  File "D:\renpy-8.0.3-sdk\renpy\ast.py", line 2115, in execute
-    if renpy.python.py_eval(condition):
-  File "D:\renpy-8.0.3-sdk\renpy\python.py", line 1092, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "D:\renpy-8.0.3-sdk\renpy\python.py", line 1085, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/main_room.rpy", line 11, in <module>
-    if here_before:
-NameError: name 'here_before' is not defined
+  File "game/main_room.rpy", line 14, in script
+    b "Back here again..."
+  File "D:\renpy-8.0.3-sdk\renpy\ast.py", line 881, in execute
+    who = eval_who(self.who, self.who_fast)
+  File "D:\renpy-8.0.3-sdk\renpy\ast.py", line 774, in eval_who
+    raise Exception("Sayer '%s' is not defined." % who)
+Exception: Sayer 'b' is not defined.
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.0.3.22090809
 GAME NAME HERE 1.0
-Sat Apr  1 23:29:10 2023
+Sat Apr  1 23:43:11 2023

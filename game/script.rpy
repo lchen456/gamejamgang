@@ -4,9 +4,9 @@
 # name of the character.
 
 init python:
-    babel = Character("Babel",  what_slow_cps=10) #young ai servant also the MC 
-    lucia = Character("Lucia") #rich heiress
-    kaine = Character("Kaine") #doctor
+    babel = Character("BABEL",  what_slow_cps=10, who_bold= True) #young ai servant also the MC 
+    lucia = Character("LUCIA") #rich heiress
+    kaine = Character("KAINE") #doctor
 
 
 # The game starts here.
@@ -19,7 +19,7 @@ label start:
 
     scene bg room #this should be the ship bg 
 
-    call lucia_room #start in lucia's room 
+    jump lucia_room #start in lucia's room 
     #fade or blink transition to new bg as you look around
     
     jump main_room
