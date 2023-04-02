@@ -1,13 +1,15 @@
 # The script of the game goes in this file.
 
 # The game starts here.
+define siren = "siren.mp3"
 
 label lucia_room:
 
     #SCENE 1
     scene black 
     scene lucias_bedroom with Dissolve(5.0, alpha=True) # bg of lucia's room
-    #insert audio here
+    
+    play audio siren
     pause 2 #pause 3 seconds for sound?
 
     #babel waking up
@@ -30,6 +32,7 @@ label lucia_room:
     babel "Directive 4 ARMED. Entering emergency protocol."
     hide babel neutral
 
+    play audio siren
     "SIREN:....there is an emergency reported in the building. Please proceed through the nearest exit to the launch for evacuation. 
     May I have your attention please…."
    
@@ -59,6 +62,7 @@ label lucia_room:
     "(There is no sign of violence or damage to the master chamber aside from the contaminant.)"
 
     #SOUND HERE
+    stop audio fadeout 1.0
     pause 2
 
     menu scene_1_end:
@@ -92,5 +96,6 @@ label lucia_room:
         show mirror babel_goo
         "(There’s nothing left to see here.)"
 
+        scene black with Dissolve(0.5, alpha == True)
         return
 

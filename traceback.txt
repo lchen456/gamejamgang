@@ -1,22 +1,22 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/main_room.rpy", line 66, in script
-    jump launch_deck
-ScriptError: could not find label 'launch_deck'.
+  File "game/main_room.rpy", line 63, in script
+    jump dining_hall
+ScriptError: could not find label 'dining_hall'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/main_room.rpy", line 66, in script
-    jump launch_deck
-  File "C:\Users\runer\Downloads\renpy-8.0.3-sdk\renpy\ast.py", line 1974, in execute
+  File "game/main_room.rpy", line 63, in script
+    jump dining_hall
+  File "D:\renpy-8.0.3-sdk\renpy\ast.py", line 1974, in execute
     rv = renpy.game.script.lookup(target)
-  File "C:\Users\runer\Downloads\renpy-8.0.3-sdk\renpy\script.py", line 927, in lookup
+  File "D:\renpy-8.0.3-sdk\renpy\script.py", line 927, in lookup
     raise ScriptError("could not find label '%s'." % str(original))
-ScriptError: could not find label 'launch_deck'.
+ScriptError: could not find label 'dining_hall'.
 
-Windows-10-10.0.19044 AMD64
+Windows-10-10.0.19045 AMD64
 Ren'Py 8.0.3.22090809
 GAME NAME HERE 1.0
-Sun Apr  2 13:50:05 2023
+Sun Apr  2 15:07:48 2023
