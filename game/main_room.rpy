@@ -56,17 +56,17 @@ label main_room:
             "Which door should I enter?"
 
             "Auditorium" if not visitAud:
-                visitAud = True
+                $ visitAud = True
                 call auditorium
                 $ nav_key += 1
 
             "Dining Hall" if not visitDin:
-                visitDin = True
+                $ visitDin = True
                 call dining_hall
                 $ nav_key += 1
 
             "Launch Deck" if not visitLaunch:
-                visitLaunch = True
+                $ visitLaunch = True
                 call launch_deck
                 $ nav_key += 1
 

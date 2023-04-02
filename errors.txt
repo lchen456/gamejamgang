@@ -1,0 +1,18 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/main_room.rpy", line 59: expected statement.
+    visitAud = True
+             ^
+
+File "game/main_room.rpy", line 64: expected statement.
+    visitDin = True
+             ^
+
+File "game/main_room.rpy", line 69: expected statement.
+    visitLaunch = True
+                ^
+
+Ren'Py Version: Ren'Py 8.0.3.22090809
+Sun Apr  2 19:32:08 2023
