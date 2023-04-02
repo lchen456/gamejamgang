@@ -96,6 +96,6 @@ label lucia_room:
         show mirror babel_goo
         "(There’s nothing left to see here.)"
 
-        scene black with Dissolve(0.5, alpha == True)
+        scene black with Dissolve(0.5, alpha =True)
         return
 
