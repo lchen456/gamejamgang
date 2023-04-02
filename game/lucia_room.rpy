@@ -97,8 +97,11 @@ label lucia_room:
         "(There’s nothing left to see here.)"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         jump main_room
 =======
+=======
+>>>>>>> refs/remotes/origin/main
         scene black with Dissolve(0.5, alpha =True)
         return
 >>>>>>> refs/remotes/origin/main

@@ -2,12 +2,15 @@
 
 While running game code:
 <<<<<<< HEAD
+<<<<<<< HEAD
   File "game/main_room.rpy", line 68, in script call
     call launch_deck
   File "game/launch_deck.rpy", line 40, in script
     show noah_cover zoom .5
 Exception: Image 'noah_cover' does not accept attributes 'zoom .5'.
 =======
+=======
+>>>>>>> refs/remotes/origin/main
   File "game/main_room.rpy", line 67, in script
     jump launch_deck
 ScriptError: could not find label 'launch_deck'.
@@ -16,6 +19,7 @@ ScriptError: could not find label 'launch_deck'.
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
+<<<<<<< HEAD
 <<<<<<< HEAD
   File "game/main_room.rpy", line 68, in script call
     call launch_deck
@@ -35,6 +39,8 @@ Full traceback:
     raise Exception("Image '{}' does not accept attributes '{}'.".format(
 Exception: Image 'noah_cover' does not accept attributes 'zoom .5'.
 =======
+=======
+>>>>>>> refs/remotes/origin/main
   File "game/main_room.rpy", line 67, in script
     jump launch_deck
   File "D:\renpy-8.0.3-sdk\renpy\ast.py", line 1974, in execute
@@ -48,7 +54,11 @@ Windows-10-10.0.19045 AMD64
 Ren'Py 8.0.3.22090809
 GAME NAME HERE 1.0
 <<<<<<< HEAD
+<<<<<<< HEAD
 Sun Apr  2 16:49:49 2023
+=======
+Sun Apr  2 16:40:14 2023
+>>>>>>> refs/remotes/origin/main
 =======
 Sun Apr  2 16:40:14 2023
 >>>>>>> refs/remotes/origin/main
