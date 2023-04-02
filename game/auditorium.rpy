@@ -31,7 +31,7 @@ label auditorium:
 
     scene stagelights with Dissolve(0.7, alpha = True) #clean version
 
-    play audio applause volume 0.7   
+    play audio sfx_applause volume 0.7   
     "(The audience applauds uproariously.)"
 
     "(You’re on the stage, and there’s a man in a suit standing over you. It takes a few seconds for your optometric rods to adjust to the spotlight.
@@ -90,7 +90,7 @@ label auditorium:
         show babel neutral
     babel "My name is Babel. I am a semi-artificial intelligence developed from biohybrid tissue using the Seed of Life." 
 
-    play audio murmuring volume 0.7 
+    play audio sfx_whispers volume 0.7 
     "(The audience explodes into hushed whispers. Could it be? Have humans finally created a being with sentience? Have humans created life?)"
 
     "(The demonstration continues. Kaine opens the discussion to the audience and you answer questions about all sorts of subjects. Famous artists. History. 
@@ -107,7 +107,7 @@ label auditorium:
 
     kaine "The future belongs to us!"
 
-    play audio applause
+    play audio sfx_applause
     "(The audience explodes into thunderous applause.)"
 
     # [dev visuals: bg fades to black]
