@@ -42,7 +42,8 @@ label dining_hall:
     if babelSprite:
         show babel neutral at left
         show lucia laugh at right
-    show lucia laugh
+    else:
+        show lucia laugh
     
     lucia "Everyone’s favorite AI companion with me!!"
 
@@ -51,7 +52,8 @@ label dining_hall:
     if babelSprite:
         show babel neutral at left
         show lucia smirk at right
-    show lucia smirk
+    else:
+        show lucia smirk
 
     "Babel’s a major part of my life here– the best part, if I’m being honest."
 
@@ -69,7 +71,8 @@ label dining_hall:
     if babelSprite:
         show babel neutral at left
         show lucia smirk at right
-    show lucia smirk
+    else:
+        show lucia smirk
 
     lucia "Babel here was developed from a Seed. The Seed of Life, I mean. We haven’t found another one yet, but our hypothesis is that they exist. For decades, we’ve been working hard to figure out how to create one."
 

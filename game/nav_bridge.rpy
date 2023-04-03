@@ -8,7 +8,7 @@ define cap = Character("CAPTAIN", who_bold = True)
 label nav_bridge:
      show navigation_bridge_goo
 
-     #[dev notes: stop siren sound, lower volume of general space track]
+     #dev notes: stop siren sound, lower volume of general space track
      play music main volume 0.4
 
      "(The ship bridge is remarkably quiet.)"
@@ -74,7 +74,7 @@ label nav_bridge:
 
 label finale:
      # [Dev Notes: show navigation bridge bg clean]
-     show navigation_bridge_f
+     scene navigation_bridge_f with Fade(0.7, 1.0, 0.7, alpha = True)
      
      "(Lucia is holding your hand and pulling you forward.)"
 
@@ -133,9 +133,9 @@ label finale:
 
      show lucia smirk with dissolve
      lucia "We need to integrate your central processing unit with the control panel’s framework."
+     hide luica smirk
 
      "(Lucia comes to stand behind you, brushing your hair to the side as she eyes your nape, where your lock mechanisms are located.)"
-     hide luica smirk
 
      show kaine_smile with dissolve
      kaine "Babel. Will you do us one last favor?"
@@ -148,10 +148,11 @@ label finale:
                # [dev notes: must click 3 times to choose option]
                if fyourself == 2:
                     $ freewill = True
-                    show lucia angry
+                    show lucia angry at left
                     lucia "Excuse me?"
-                    hide lucia angry
+                    show kaine_smile at right
                     "(Lucia gapes at you. Kaine just stares.)"
+
                else: #fyourself < 2
                     "(I shouldn't say this.)"
                     $ fyourself +=1
@@ -159,21 +160,25 @@ label finale:
 
 
 label noahsark:
+     hide kaine_smile
+     hide lucia angry
 
      "(Suddenly, there’s a loud commotion at the door. A man’s voice begins shouting.)"
 
      show kaine_smile
      kaine "What the hell, I said we were not to be disturbed!"
+     hide kaine_smile
 
      "(Someone bursts into the room. You can see the security guards knocked out on the floor behind him.)"
-
+     
+     show kaine_smile
      kaine "Noah?"
      hide kaine_smile
 
+     show noah_disgust with dissolve
      "(Indeed. It’s Noah Williams. He must have used his high clearance to bypass the alarms. 
      You think his file mentioned some history with Kaine. Former research partners?)"
 
-     show noah_disgust
      noah "You."
      hide noah_disgust
 
@@ -205,9 +210,9 @@ label noahsark:
 
      "(While he’s distracted, another guard tackles him from behind.)"
 
-     show noah_sweat
+     show noah_groan
      noah "Ooof-"
-     hide noah_sweat
+     hide noah_groan
 
      "(He drops the gun. Kaine and Lucia pounce on the human brain.)"
 
@@ -218,26 +223,38 @@ label noahsark:
      kaine "But Babel-"
 
      lucia "There’s a maniac with a gun trying to kill us!! It’s now or never!!!"
+     hide lucia angry
+     hide kaine_smile
 
      "(You put yourself between the two of them and the writhing men on the ground. You’re not sure what’s going on, 
      but you’re not supposed to let anyone kill Lucia and Kaine.)"
-
+     
+     show lucia angry at left
+     show kaine_smile at right
      lucia "How the fuck did he get in?!"
      kaine "He built half this damn ship, that’s how. "
+     hide lucia angry
+     hide kaine_smile
 
      "(There’s more shouting from outside. The crew and captain must have gotten wind of what’s happening.)"
-
+     
+     show lucia angry at left
      lucia "I’m going to call for more help. I’m not dying here. The world needs me."
      lucia "You finish that damn thing!"
+     
+     show kaine_smile at right
      kaine "I’M GOING AS FAST AS I CAN."
 
      hide lucia angry 
      hide kaine_smile
+
      "(Lucia dodges Noah and the guard and rushes to the door.)"
 
+     show noah_disgust
      "(There’s a sickening crack of bone and flesh. Noah won the fight.)"
 
      "(He breaks out of the security guard’s hold and lunges at you.)"
+     hide noah_disgust
 
      "(Lucia screams.)"
 
@@ -245,9 +262,9 @@ label noahsark:
      lucia "BABEL!!"
 
      lucia "Babel, come with me NOW."
-     hide lucia angry
 
      "(You look at her, coiffed hair ruined and makeup smeared all over her clothes. You don’t really feel like going anywhere.)"
+     hide lucia angry
 
      "(Before you could do anything, a hand encircles your throat and you are bodily launched onto the chromeplate floor.)"
 
@@ -258,14 +275,17 @@ label noahsark:
 
      "(Being an ex-PANDORA executive, he should have been aware of that. Unless he wasn’t in his right mind.)"
 
-     show babel neutral
+     if babelSprite:
+          show babel neutral at left
      babel "Am…pheta…mines... for sure…"
      hide babel neutral
 
-     show noah_groan
+     if babelSprite:
+          show noah_sweat at right
+     else:
+          show noah_sweat
      noah "You’ve doomed us with your existence. "
 
-     hide noah_groan
      "(You scan him calmly, ignoring the vice around your throat. His heartrate is 225BPM. 
      His irises are extremely dilated. You can think you can see wet eyelashes and the glittering of tears.)"
 
@@ -273,17 +293,21 @@ label noahsark:
 
      "(He’s at risk of cardiac arrest. You need to call for a medic.)"
 
-     show babel neutral
      babel "You…need…h-elp.."
 
      "(Your vocal cords are reinforced with carbon. They are not easily damaged, but it still hurts.)"
 
      noah "Jesus Christ, I hate that customer service algorithm."
 
+     hide babel neutral
+     hide noah_sweat
+
      "(He lifts your head up by the neck and slams it down. You feel something being dislodged in the hind section of your brain.)"
 
      #[dev notes: add audio file thunking]
 
+     if babelSprite:
+          show babel neutral
      play sound sfx_thud
      babel "Not….customer… ser-"
      stop sound
@@ -291,42 +315,58 @@ label noahsark:
 
      "(He does it again)"
 
-     show babel neutral
-     #[dev notes: add audio file thunking]
+     if babelSprite:
+          show babel neutral
+     #dev notes: add audio file thunking
      play sound sfx_thud
      babel "........"
      stop sound
      hide babel neutral
 
+     show kaine_smile
      "(In the distance, you see Kaine still integrating the brain and the Seed onto the control panel.)"
 
-     "(He’s almost done.)"
+     "(He’s almost done.)"     
+     hide kaine_smile
 
+     if babelSprite:
+          show babel neutral
      babel "I am sorry...."
+     hide babel neutral
 
      "(You squeeze your eyes shut. You don’t want to see things you can’t do anything about.)"
      "(Noah has stopped.)"
 
+     if babelSprite:
+          show babel neutral
      babel "..that I exist."
+     hide babel neutral
 
      "(You keep trying to push him off. Some things in your skull are loose. He’s doing actual damage now. You could die.)"
 
+     show noah_look
      noah "....."
+     hide noah_look
 
      "(You feel tight, like you cannot breath despite not needing air. 
      You want to run another diagnostic but you suspect it would find nothing, again. 
      You brace your hand on his shoulders, trying to remove him but he doesn’t budge an inch. He’s incredibly solid.)"
 
+     show noah_look
      noah "You.. you’re-"
+     hide noah_look with dissolve
 
      #[dev notes: all audio stops except for heartbeat track]
+     play sound sfx_heartbeat
 
      "(Suddenly, your fingers go through him.)"
      "(Something heavy collapses on top of you. A liquid. It splatters all over your face, your hair.)"
      "(Some of it gets into your open mouth.)"
 
      #[dev notes: heartbeat track still going, add coughing] 
-     show babel neutral
+     play sound sfx_cough
+     if babelSprite:
+          show babel neutral
      babel "COUGH COUGH COUGH COUGH"
 
      "(It’s cloying and thick. It reeks of blood.)"
@@ -336,6 +376,7 @@ label noahsark:
      "(Your working memory is only around two hours long. You are no longer capable of retaining memories beyond this time frame.)"
 
      babel "What’s happening..."
+     hide babel neutral
 
      "(You look for Kaine but he’s gone, too. The control panel is closed. He must have finished his work. 
      There’s more of the dark liquid on the floor where he stood.)"
@@ -346,9 +387,11 @@ label noahsark:
 
      "(Soundlessly, they explode. But instead of blood and guts, only a viscous, scarlet black liquid projects into the air, 
      cascading on every surface.)"
-
-     show babel fear
+     if babelSprite:
+          show babel fear
      babel "Somebody.....help..."
+
+     jump nav_scene3b
 
 
 label nav_scene3b:

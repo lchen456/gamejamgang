@@ -82,8 +82,8 @@ label launch_deck:
    
     noah "I feel sorry for you."
     noah "You’re a monument to our depravity." 
-
-    show babel neutral at left with fade    
+    if babelSprite:
+        show babel neutral at left with fade    
     "(You cock your head questioningly)"
     hide babel neutral 
     
@@ -96,7 +96,8 @@ label launch_deck:
     babel "Is that why you’re leaving?"
 
     hide noah_disgust
-    show babel neutral
+    if babelSprite:
+        show babel neutral
     "(What compelled you to say that? Running diagnostics in 3..2..1….)"
     "(....Diagnostics indicate all functioning is unimpeded…….)"
     
