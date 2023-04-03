@@ -4,8 +4,6 @@ define freewill = False
 define fyourself = 0
 define cap = Character("CAPTAIN", who_bold = True) 
 
-image end movie = Movie(play="end.webm", side_mask=True)
-
 #SCENE 3
 label nav_bridge:
      show navigation_bridge_goo
@@ -379,50 +377,57 @@ label nav_scene3b:
 
      menu:
           "Go outside." if freewill:
-               jump outside
+               jump outside 
+               
           "Go to sleep.":
                scene black with Dissolve(1, alpha = False)
                jump credits
 
-label outside:
-     scene black
-     # [Black screen]
-     # [Sound: breathing]
-     # [Sound: heartbeat]
-     play audio sfx_breathing
-     play audio sfx_heartbeat
-     play audio sfx_foosteps
-     # [footsteps]
-     # [Music stops]
-     stop audio 
-     # [dev note: GOD ENDING Animation]
+     label outside:
+          scene black
+          # [Black screen]
+          # [Sound: breathing]
+          # [Sound: heartbeat]
+          play audio sfx_breathing
+          play audio sfx_heartbeat
+          play audio sfx_footsteps
+          # [footsteps]
+          # [Music stops]
+          stop audio 
+          # [dev note: GOD ENDING Animation]
 
-     show end movie 
-     # [roll credits]
-     jump credits
+          show hand_1
+          pause 0.25
+          show hand_2
+          pause 0.5
+          show hand_3
+          pause 0.5
 
-label credits:
-     #CREDITS GO HERE
-     #scrolling credits effect credit DaFool, leon, modified by rabcor, with some edits
-     play music main 
-     scene black
+          # [roll credits]
+          jump credits
 
-     image logo = "logo.png"
-     image splash = "mirror babel_goo.png" 
-     image cred = Text(credits_s, text_align=0.5)
+     label credits:
+          #CREDITS GO HERE
+          #scrolling credits effect credit DaFool, leon, modified by rabcor, with some edits
+          play music main 
+          scene black
 
-     $ credits_speed = 25 #scrolling speed in seconds
+          image logo = "logo.png"
+          image splash = "mirror babel_goo.png" 
+          image cred = Text(credits_s, text_align=0.5)
 
-     show logo with Fade(0.5, 0.7, 0.5) 
-     pause 5.0
-     hide logo with dissolve
-     show cred at Move((0.5, 2.0), (0.5, 0.0), credits_speed, repeat=False, bounce=False, xanchor="center", yanchor="bottom")
-     with Pause(credits_speed - 5)
-     show splash behind cred with dissolve 
-     with Pause(5)
+          $ credits_speed = 25 #scrolling speed in seconds
 
-     stop music fadeout 0.5
+          show logo with Fade(0.5, 0.7, 0.5) 
+          pause 5.0
+          hide logo with dissolve
+          show cred at Move((0.5, 2.0), (0.5, 0.0), credits_speed, repeat=False, bounce=False, xanchor="center", yanchor="bottom")
+          with Pause(credits_speed - 5)
+          show splash behind cred with dissolve 
+          with Pause(5)
 
-     show text "Thank you"
+          stop music fadeout 0.5
+
+          show text "Thank you"
      return
      

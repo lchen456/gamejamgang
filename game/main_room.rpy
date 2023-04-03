@@ -1,7 +1,6 @@
 ﻿# main hub that the character returns to after every memory
 
 define here_before = False
-define nav_key = 0
 
 label main_room:
 
@@ -60,17 +59,14 @@ label main_room:
             "Auditorium" if not visitAud:
                 $ visitAud = True
                 call auditorium from _call_auditorium
-                $ nav_key += 1
 
             "Dining Hall" if not visitDin:
                 $ visitDin = True
                 call dining_hall from _call_dining_hall
-                $ nav_key += 1
 
             "Launch Deck" if not visitLaunch:
                 $ visitLaunch = True
                 call launch_deck from _call_launch_deck
-                $ nav_key += 1
 
             "Navigation Bridge":
                 if visitAud and visitDin and visitLaunch:
