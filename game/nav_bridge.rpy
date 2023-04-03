@@ -146,15 +146,13 @@ label finale:
                jump noahsark
           "Go fuck yourself.":
                # [dev notes: must click 3 times to choose option]
-               if fyourself < 3:
-                    jump eff
-               elif fyourself == 2:
+               if fyourself == 2:
                     $ freewill = True
                     lucia "Excuse me?"
                     "(Lucia gapes at you. Kaine just stares.)"
-                    jump noahsark
-               else:
+               else: #fyourself < 2
                     $ fyourself +=1
+                    jump eff
 
 
 label noahsark:
@@ -394,7 +392,7 @@ label outside:
      stop audio 
      # [dev note: GOD ENDING Animation]
 
-     show end
+     show 
      # [roll credits]
      jump credits
 
