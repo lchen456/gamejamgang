@@ -394,6 +394,7 @@ label outside:
      stop audio 
      # [dev note: GOD ENDING Animation]
 
+     show end
      # [roll credits]
      jump credits
 

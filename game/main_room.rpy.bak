@@ -59,17 +59,17 @@ label main_room:
 
             "Auditorium" if not visitAud:
                 $ visitAud = True
-                call auditorium from _call_auditorium
+                call auditorium
                 $ nav_key += 1
 
             "Dining Hall" if not visitDin:
                 $ visitDin = True
-                call dining_hall from _call_dining_hall
+                call dining_hall
                 $ nav_key += 1
 
             "Launch Deck" if not visitLaunch:
                 $ visitLaunch = True
-                call launch_deck from _call_launch_deck
+                call launch_deck
                 $ nav_key += 1
 
             "Navigation Bridge":
