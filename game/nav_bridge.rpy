@@ -1,11 +1,12 @@
 
 define main = "audio/mus_main.mp3"
 define freewill = False
-define fyourself = 0
 define cap = Character("CAPTAIN", who_bold = True) 
 
 #SCENE 3
 label nav_bridge:
+     $ fyourself = 0
+
      show navigation_bridge_goo
 
      #[dev notes: stop siren sound, lower volume of general space track]
@@ -147,14 +148,15 @@ label finale:
           "Go fuck yourself.":
                # [dev notes: must click 3 times to choose option]
                if fyourself < 3:
+                    "(I can't say this.)"
+                    $ fyourself +=1
                     jump eff
                elif fyourself == 2:
                     $ freewill = True
                     lucia "Excuse me?"
                     "(Lucia gapes at you. Kaine just stares.)"
-                    jump noahsark
-               else:
-                    $ fyourself +=1
+
+
 
 
 label noahsark:
@@ -393,7 +395,7 @@ label outside:
      # [Music stops]
      stop audio 
      # [dev note: GOD ENDING Animation]
-
+     
      # [roll credits]
      jump credits
 
