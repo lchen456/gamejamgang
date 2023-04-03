@@ -1,12 +1,13 @@
 
 define main = "audio/mus_main.mp3"
 define freewill = False
+define fyourself = 0
 define cap = Character("CAPTAIN", who_bold = True) 
+
+image end movie = Movie(play="end.webm", side_mask=True)
 
 #SCENE 3
 label nav_bridge:
-     $ fyourself = 0
-
      show navigation_bridge_goo
 
      #[dev notes: stop siren sound, lower volume of general space track]
@@ -134,8 +135,9 @@ label finale:
 
      show lucia smirk with dissolve
      lucia "We need to integrate your central processing unit with the control panel’s framework."
+
      "(Lucia comes to stand behind you, brushing your hair to the side as she eyes your nape, where your lock mechanisms are located.)"
-     hide lucia smirk
+     hide luica smirk
 
      show kaine_smile with dissolve
      kaine "Babel. Will you do us one last favor?"
@@ -156,9 +158,6 @@ label finale:
                     "(I shouldn't say this.)"
                     $ fyourself +=1
                     jump eff
-
-
-
 
 
 label noahsark:
@@ -392,12 +391,13 @@ label outside:
      # [Sound: heartbeat]
      play audio sfx_breathing
      play audio sfx_heartbeat
-     play audio sfx_footsteps
+     play audio sfx_foosteps
      # [footsteps]
      # [Music stops]
      stop audio 
      # [dev note: GOD ENDING Animation]
-     show end
+
+     show end movie 
      # [roll credits]
      jump credits
 

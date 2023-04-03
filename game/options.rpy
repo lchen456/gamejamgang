@@ -19,7 +19,8 @@ define config.name = _("BABEL")
 
 define gui.show_name = True
 
-define gui.main_menu_background = "title_1(main).png"
+# define gui.main_menu_background = "title_1(main).png"
+define gui.main_menu_background = Movie(play="title_screen.webm")
 
 ## The version of the game.
 

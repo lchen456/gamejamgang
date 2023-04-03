@@ -35,7 +35,7 @@ label start:
     # add a file (named either "bg room.png" or "bg room.jpg") to the
     # images directory to show it.
 
-    call lucia_room from _call_lucia_room #start in lucia's room 
+    call lucia_room #start in lucia's room 
     #fade or blink transition to new bg as you look around
     
     jump main_room

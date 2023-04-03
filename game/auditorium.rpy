@@ -40,7 +40,7 @@ label auditorium:
     show kaine_smile with dissolve
     kaine "Every once in a while, an invention comes along that revolutionizes everything."
 
-    "(Kaine Edelweiss. My creator.)"
+    "(Kaine Edelweiss. Your creator.)"
     stop audio
 
     kaine "The wheel. The steam engine. Nuclear fission. The Theory of Evolution."
