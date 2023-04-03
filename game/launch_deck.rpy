@@ -115,13 +115,13 @@ label launch_deck:
 
     noah "Kaine forgets that we emerged from microbes and muck. We are made of the same substance we seek to control."
 
-    show noah_disgust at right
+    show noah_disgust
     hide noah_look
     noah "That bastard synonymizes knowledge with moral superiority. He thinks himself merciful for the most basic of decencies."
 
     "(His face scrunches up in a complex emotion.)"
 
-    noah "Now that you're a success', they won’t ever stop."
+    noah "Now that you're a 'success', they won’t ever stop."
 
     "(You consider scanning him for his vital signs but decide against it.)"
     "(You’re not sure what you would do if the customer service algorithm was lifted.)"
@@ -132,8 +132,9 @@ label launch_deck:
 
     noah "But they are all wrong. The shape of life is not a pyramid."
     hide noah_disgust
-    show noah_sweat with fade:
-        ease .1 zoom 1.5 xoffset 300 yoffset 50
+    show noah_sweat at center:
+        yalign 0.2
+        ease 2 zoom 2
     
     "(He’s gasping for breath, sweat dripping down his chin.)"
 

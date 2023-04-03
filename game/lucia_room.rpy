@@ -103,7 +103,7 @@ label lucia_room:
             "mirror babel_goo.png" with Dissolve(3.0, alpha=True)
         
         show mirror babel_goo
-        "(There’s nothing left to see here.)"
+        "(There’s nothing left to see here. You leave the room)"
 
         scene black with Dissolve(0.5, alpha =True)
         return

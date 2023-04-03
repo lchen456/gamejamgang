@@ -174,7 +174,7 @@ label scene_a1:
     "(Kaine cups your cheeks in his hands and looks at you with a pained expression.)" 
 
 
-    kaine "Look at you… you’re humanity’s greatest triumph."
+    kaine "Look at you… you are humanity’s greatest triumph."
     hide kaine_smile
     hide babel neutral
 

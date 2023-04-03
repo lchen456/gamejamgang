@@ -10,7 +10,7 @@ init python:
     kaine = Character("KAINE", who_bold = True) #doctor
     noah = Character("NOAH", who_bold = True) #teacher
     babelSprite = False
-    s = Character("SIREN", who_bold = True)
+    s = Character("SIREN", color="#c0262b",what_color = "#c0262b", who_bold = True)
 
     visitAud = False
     visitDin = False

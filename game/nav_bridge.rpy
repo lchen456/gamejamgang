@@ -133,7 +133,7 @@ label finale:
 
      show lucia smirk with dissolve
      lucia "We need to integrate your central processing unit with the control panel’s framework."
-     hide luica smirk
+     hide lucia smirk
 
      "(Lucia comes to stand behind you, brushing your hair to the side as she eyes your nape, where your lock mechanisms are located.)"
 
@@ -440,10 +440,21 @@ label nav_scene3b:
           # [dev note: GOD ENDING Animation]
 
           show hand_1
-          pause 0.25
+          pause 0.5
+          hide hand_1
+          show black 
+          pause 0.5
+
           show hand_2
           pause 0.5
+          hide hand_2
+          show black 
+          pause 0.5
+
           show hand_3
+          pause 0.5
+          hide hand_2
+          show black 
           pause 0.5
 
           # [roll credits]
@@ -469,7 +480,7 @@ label nav_scene3b:
           show splash behind cred with dissolve 
           with Pause(5)
 
-          stop music fadeout 0.5
+          stop music fadeout 1
 
           show text "Thank you"
      return
