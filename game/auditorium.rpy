@@ -31,7 +31,7 @@ label auditorium:
 
     scene stagelights with Dissolve(0.7, alpha = True) #clean version
 
-    play audio sfx_applause volume 0.7   
+    play sound sfx_applause volume 0.5  
     "(The audience applauds uproariously.)"
 
     "(You’re on the stage, and there’s a man in a suit standing over you. It takes a few seconds for your optometric rods to adjust to the spotlight.
@@ -41,7 +41,7 @@ label auditorium:
     kaine "Every once in a while, an invention comes along that revolutionizes everything."
 
     "(Kaine Edelweiss. Your creator.)"
-    stop audio
+    stop sound
 
     kaine "The wheel. The steam engine. Nuclear fission. The Theory of Evolution."
     kaine "This is a moment that I have been awaiting for fifteen years, because today….I have been blessed with the honor to present to you such a discovery."
@@ -55,7 +55,9 @@ label auditorium:
     hide kaine_smile
 
     # [Show object asset *Seed of Life*]
-
+    show seed at top
+    pause 2
+    hide seed
     show kaine_smile at right with dissolve
     kaine "Please allow me to introduce..."
 
@@ -68,10 +70,12 @@ label auditorium:
     kaine "Come here, my boy. Step into the light."
 
     "(You take his hand and walk forward, downstage.)"
-
+    if babelSprite:
+        show babel neutral at left
     kaine "I’m sure you must be thinking ‘Yet another AI assistant?’, but I assure you– Babel is much more than that." 
     hide kaine_smile
-
+    hide babel neutral
+    
     if babelSprite:
         show babel neutral with dissolve
     babel "Hello, world."
@@ -90,15 +94,16 @@ label auditorium:
         show babel neutral
     babel "My name is Babel. I am a semi-artificial intelligence developed from biohybrid tissue using the Seed of Life." 
 
-    play audio sfx_whispers volume 0.7 
+    play sound sfx_whispers volume 0.5 
     "(The audience explodes into hushed whispers. Could it be? Have humans finally created a being with sentience? Have humans created life?)"
 
     "(The demonstration continues. Kaine opens the discussion to the audience and you answer questions about all sorts of subjects. Famous artists. History. 
     The Fibonacci sequence.)"
+    stop sound fadeout 1.0
 
     "(The investors love you. One in particular eyes you from a high VIP seat.)"
     hide babel neutral
-    stop audio
+
     show kaine_smile with dissolve
     kaine "Modern science has been a journey into the unknown, with a lesson in humility waiting at every stop. But in the face of such cosmic challenges, 
     humanity has endured. Not only have we survived, we have defied all expectations to become a space-faring civilization." 
@@ -107,14 +112,14 @@ label auditorium:
 
     kaine "The future belongs to us!"
 
-    play audio sfx_applause
+    play sound sfx_applause
     "(The audience explodes into thunderous applause.)"
 
     # [dev visuals: bg fades to black]
     # [dev visuals: transition to SCENE A1 (bg still black)]
 
     scene black with Fade(0.7, 2.0, 0.5)
-    stop audio fadeout 0.5
+    stop sound fadeout 1
     jump scene_a1
     
     return 

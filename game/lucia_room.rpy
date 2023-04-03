@@ -10,7 +10,7 @@ label lucia_room:
     
     play sound sfx_siren volume 0.25
     pause 2 #pause 3 seconds for sound?
-    s "	SIREN: May I have your attention please...
+    s "May I have your attention please...
     May I have your attention please. 
     There is an emergency reported in the building. 
     Please proceed through the nearest exit to the launch pad for evacuation. 

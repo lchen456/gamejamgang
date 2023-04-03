@@ -10,7 +10,7 @@ image end = Movie(play="end.webm")
 label nav_bridge:
      show navigation_bridge_goo
 
-     dev notes: stop siren sound, lower volume of general space track]
+     #dev notes: stop siren sound, lower volume of general space track
      play music main volume 0.4
 
      "(The ship bridge is remarkably quiet.)"
