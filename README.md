@@ -1,5 +1,5 @@
 # gamejamgang
-for slice of jam game jam
+[A visual novel made for Northeastern University's Slice of Jam 2023.] 
 
 https://splitsuns.itch.io/babel
 
