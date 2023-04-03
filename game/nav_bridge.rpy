@@ -150,9 +150,12 @@ label finale:
                # [dev notes: must click 3 times to choose option]
                if fyourself == 2:
                     $ freewill = True
+                    show lucia angry
                     lucia "Excuse me?"
+                    hide lucia angry
                     "(Lucia gapes at you. Kaine just stares.)"
                else: #fyourself < 2
+                    "(I shouldn't say this.)"
                     $ fyourself +=1
                     jump eff
 
