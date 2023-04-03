@@ -4,6 +4,8 @@ define freewill = False
 define fyourself = 0
 define cap = Character("CAPTAIN", who_bold = True) 
 
+image end movie = Movie(play="end.webm", side_mask=True)
+
 #SCENE 3
 label nav_bridge:
      show navigation_bridge_goo
@@ -392,7 +394,7 @@ label outside:
      stop audio 
      # [dev note: GOD ENDING Animation]
 
-     show 
+     show end movie 
      # [roll credits]
      jump credits
 

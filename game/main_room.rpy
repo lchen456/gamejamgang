@@ -73,8 +73,9 @@ label main_room:
                 $ nav_key += 1
 
             "Navigation Bridge":
-                if not visitAud and not visitDin and not visitLaunch:
+                if visitAud and visitDin and visitLaunch:
+                    jump nav_bridge
+                else: 
                     babel "I don't have the authorization to enter this room"
                     jump lobby_map
-                else: 
-                    jump nav_bridge
+                    
