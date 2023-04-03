@@ -134,9 +134,8 @@ label finale:
 
      show lucia smirk with dissolve
      lucia "We need to integrate your central processing unit with the control panel’s framework."
-
      "(Lucia comes to stand behind you, brushing your hair to the side as she eyes your nape, where your lock mechanisms are located.)"
-     hide luica smirk
+     hide lucia smirk
 
      show kaine_smile with dissolve
      kaine "Babel. Will you do us one last favor?"
@@ -147,7 +146,7 @@ label finale:
                jump noahsark
           "Go fuck yourself.":
                # [dev notes: must click 3 times to choose option]
-               if fyourself < 3:
+               if fyourself < 2:
                     "(I can't say this.)"
                     $ fyourself +=1
                     jump eff
