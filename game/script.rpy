@@ -34,6 +34,7 @@ label start:
     # Show a background. This uses a placeholder by default, but you can
     # add a file (named either "bg room.png" or "bg room.jpg") to the
     # images directory to show it.
+    stop audio fadeout 1.0
 
     call lucia_room from _call_lucia_room #start in lucia's room 
     #fade or blink transition to new bg as you look around

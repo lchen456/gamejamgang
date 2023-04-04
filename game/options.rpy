@@ -63,7 +63,8 @@ define config.has_voice = True
 ## the player is at the main menu. This file will continue playing into the
 ## game, until it is stopped or another file is played.
 
-# define config.main_menu_music = "main-menu-theme.ogg"
+define config.main_menu_music = "audio/mus_title.mp3"
+define config.default_music_volume = 0.1
 
 
 ## Transitions #################################################################
@@ -144,14 +145,14 @@ default preferences.afm_time = 15
 ## This generally should not be changed, and if it is, should always be a
 ## literal string, not an expression.
 
-define config.save_directory = "gamejamgang2-1680369389"
+define config.save_directory = "babel"
 
 
 ## Icon ########################################################################
 ##
 ## The icon displayed on the taskbar or dock.
 
-define config.window_icon = "gui/window_icon.png"
+define config.window_icon = "window_icon.png"
 
 
 ## Build configuration #########################################################
