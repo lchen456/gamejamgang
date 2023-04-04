@@ -1,16 +1,15 @@
 
-define main = "audio/mus_main.mp3"
 define freewill = False
 define fyourself = 0
 define cap = Character("CAPTAIN", who_bold = True) 
-define c = Character("cREW", who_bold = True)
+define crew = Character("CREW", who_bold = True)
 
 #SCENE 3
 label nav_bridge:
      show navigation_bridge_goo
 
      #dev notes: stop siren sound, lower volume of general space track
-     play music main volume 0.4
+     play sound mus_main volume 0.3
 
      "(The ship bridge is remarkably quiet.)"
 
@@ -46,24 +45,26 @@ label nav_bridge:
      "(You find a spike in the signals from weeks ago. One that is only sent when a ship goes down– the dead man’s switch. 
      It’s a recording.)"
 
-     c "This is the SERAPHIM. We are reporting an ongoing incident on board." 
+     stop sound fadeout 1.0
+
+     crew "This is the SERAPHIM. We are reporting an ongoing incident on board." 
 
      "(Her voice is shaky. There are strange howling noises in the background. Dogs?)"
 
-     c "We are enroute to Asteroid #KL97 on a sample retrieval mission. "
+     crew "We are enroute to Asteroid #KL97 on a sample retrieval mission. "
 
-     c "We have live cargo with us. And also personal animals. In seemingly random order, 
+     crew "We have live cargo with us. And also personal animals. In seemingly random order, 
      they’ve undergone an almost instantaneous metamorpho-"
 
      "(There’s a sound of something like a wet explosion.)"
 
-     c "OH MY GOD, WHAT THE FUCK?!"
+     crew "OH MY GOD, WHAT THE FUCK?!"
 
      "(She’s screaming. You can almost hear her voice start to shred with distress.)"
 
-     c "CAPTAIN?! CAPTAIN!"
+     crew "CAPTAIN?! CAPTAIN!"
 
-     c "CA-"
+     crew "CA-"
 
      "(The recording ends. She must have stopped pressing the dead man’s switch.)"
 
@@ -331,13 +332,11 @@ label noahsark:
 
      "(He lifts your head up by the neck and slams it down. You feel something being dislodged in the hind section of your brain.)"
 
-     #[dev notes: add audio file thunking]
+     play sound sfx_thud loop #LOOP
 
      if babelSprite:
           show babel neutral
-     play sound sfx_thud
      babel "Not….customer… ser-"
-     stop sound
      hide babel neutral
 
      "(He does it again)"
@@ -345,16 +344,15 @@ label noahsark:
      if babelSprite:
           show babel neutral
      #dev notes: add audio file thunking
-     play sound sfx_thud
      babel "........"
 
      hide babel neutral
 
-     show kaine_smile
+     show kaine_smile at right:
+          zoom 0.5
      "(In the distance, you see Kaine still integrating the brain and the Seed onto the control panel.)"
-
-     "(He’s almost done.)"     
      hide kaine_smile
+     "(He’s almost done.)"     
 
      if babelSprite:
           show babel neutral
@@ -362,6 +360,7 @@ label noahsark:
      hide babel neutral
 
      "(You squeeze your eyes shut. You don’t want to see things you can’t do anything about.)"
+     stop sound
      "(Noah has stopped.)"
 
      if babelSprite:
@@ -461,8 +460,8 @@ label nav_scene3b:
                jump outside 
                
           "Go back to charge in Lucia’s room.":
-               scene black with Dissolve(1, alpha = False)
-               jump credits
+               # scene black with Dissolve(1, alpha = False)
+               jump lucia_room_end
      return
 
 label outside:
