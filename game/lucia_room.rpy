@@ -91,7 +91,7 @@ label lucia_room:
         "(You look out the port window. Pinpoints of light twinkle in the vast, dark void. They do not match any constellations in your database.)"
 
         babel "There are multiple pieces of furniture inside this chamber. Cataloging now…. Bed, Sofa, Sofa #2, Dresser, Dresser #2, Dresser #3, Vanity, Holoscreen, Mirror."
-
+        scene black with dissolve
         show mirror base with Fade(0.5,0.5,0.5)
         pause 1
         show mirror
