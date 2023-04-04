@@ -163,6 +163,7 @@ label noahsark:
      hide kaine_smile
      hide lucia angry
 
+     stop audio
      "(Suddenly, there’s a loud commotion at the door. A man’s voice begins shouting.)"
 
      show kaine_smile
@@ -320,7 +321,7 @@ label noahsark:
      #dev notes: add audio file thunking
      play sound sfx_thud
      babel "........"
-     stop sound
+
      hide babel neutral
 
      show kaine_smile
@@ -354,6 +355,8 @@ label noahsark:
 
      show noah_look
      noah "You.. you’re-"
+     stop sound
+     
      hide noah_look with dissolve
 
      #[dev notes: all audio stops except for heartbeat track]

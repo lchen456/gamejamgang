@@ -1,7 +1,7 @@
 #auditorium room
 
 define applause = "audio/sfx_applause.mp3"
-define murmuring = "audio/sfx_whispers.mp3"
+define murmuring = "audio/sfx_murmuring.mp3"
 
 define lt = Character("LAB TECH", who_bold = True)
 #scene A:
