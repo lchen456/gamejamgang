@@ -127,6 +127,5 @@ label lucia_room_end:
     babel "97\%...98\%...99\%..."
     babel "Reboot complete."
     play sound sfx_jingle
-    
 
     jump credits

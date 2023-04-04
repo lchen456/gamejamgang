@@ -178,7 +178,7 @@ label finale:
 
                else: #fyourself < 2
                     if fyourself == 1:
-                         "I shouldn't say this?"
+                         "(I shouldn't say this?)"
                     else:
                          "(I shouldn't say this.)"
                     $ fyourself +=1
@@ -501,7 +501,7 @@ label credits:
      #CREDITS GO HERE
      #scrolling credits effect credit DaFool, leon, modified by rabcor, with some edits
      play sound mus_main
-     scene black
+     scene black with Fade(0.5, 0.5, 0.5)
 
      image logo = "logo.png"
      image splash = "mirror babel_goo.png" 
