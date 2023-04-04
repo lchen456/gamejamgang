@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/options.rpy", line 66: invalid syntax
-    "audio/mus_title.mp3" fadein 1.0
-                           ^
+File "game/nav_bridge.rpy", line 483: play requires a file
+    play end
+            ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Tue Apr  4 11:19:09 2023
+Tue Apr  4 16:53:07 2023

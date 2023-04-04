@@ -469,34 +469,36 @@ label outside:
      # [Black screen]
      # [Sound: breathing]
      # [Sound: heartbeat]
-     play audio sfx_breathing
-     pause 1.0
-     play audio sfx_heartbeat
-     pause 1.0
-     play sound sfx_footsteps
-     pause 3.0
-     stop sound
-     # [Music stops]
+     # play audio sfx_breathing
+     # pause 1.0
+     # play audio sfx_heartbeat
+     # pause 1.0
+     # play sound sfx_footsteps
+     # pause 3.0
+     # stop sound
+     # # [Music stops]
 
      # [dev note: GOD ENDING Animation]
+     # image end = Movie(play="god_ending.webm", side_mask=True)
+     $ renpy.movie_cutscene("images/god_ending.webm")
 
-     show hand_1
-     pause 0.5
-     hide hand_1
-     show black 
-     pause 0.5
+     # show hand_1
+     # pause 0.5
+     # hide hand_1
+     # show black 
+     # pause 0.5
 
-     show hand_2
-     pause 0.5
-     hide hand_2
-     show black 
-     pause 0.5
+     # show hand_2
+     # pause 0.5
+     # hide hand_2
+     # show black 
+     # pause 0.5
 
-     show hand_3
-     pause 0.5
-     hide hand_2
-     show black 
-     pause 0.5
+     # show hand_3
+     # pause 0.5
+     # hide hand_2
+     # show black 
+     # pause 0.5
 
      # [roll credits]
      jump credits
