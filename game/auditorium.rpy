@@ -22,12 +22,15 @@ label auditorium:
 
     #SHOW TERMINAL HERE
 
+    show charging_station at right:
+        zoom 0.8
     "(There’s a terminal on your right-hand side. It appears to be functional.)"
 
     if babelSprite:
         show babel neutral with dissolve
     babel "Retrieving data..."
     hide babel neutral
+    hide charging_station
 
     scene stagelights with Fade(0.5, 0.5, 0.5) 
 
@@ -44,7 +47,7 @@ label auditorium:
     stop sound
 
     kaine "The wheel. The steam engine. Nuclear fission. The Theory of Evolution."
-    kaine "This is a moment that I have been awaiting for fifteen years, because today….I have been blessed with the honor to present to you such a discovery."
+    kaine "This is a moment that I have been awaiting for fifteen years, because today...I have been blessed with the honor to present to you such a discovery."
     hide kaine_smile
 
     "(There’s a screen behind him depicting still images and videos of Kaine and his team.)"
@@ -95,7 +98,7 @@ label auditorium:
         show babel neutral
     babel "My name is Babel. I am a semi-artificial intelligence developed from biohybrid tissue using the Seed of Life." 
 
-    play sound sfx_whispers volume 0.5 
+    play sound murmuring volume 0.5 
     "(The audience explodes into hushed whispers. Could it be? Have humans finally created a being with sentience? Have humans created life?)"
 
     "(The demonstration continues. Kaine opens the discussion to the audience and you answer questions about all sorts of subjects. Famous artists. History. 

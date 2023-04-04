@@ -17,13 +17,13 @@ label lucia_room:
     May I have your attention please…."
 
     #babel waking up
-    babel "97\%...98\%...99\%..."
+    babel "97\% . . . 98\% . . . 99\% . . ."
     babel "Reboot complete."
     
-    "(Directive 1.....ERROR.....Directive 2...ERROR...)"
+    "(Directive 1 . . . ERROR . . . Directive 2 . . . ERROR . . .)"
     stop sound
 
-    "(Neurolink Status: Disconnected. Fusion status…ERROR. Powersource linking to battery...)"
+    "(Neurolink Status: Disconnected. Fusion status...ERROR. Powersource linking to battery...)"
 
     babel "Welcome aboard the PANDORA! Thank you for choosing us to fulfill all your luxury vacation needs. 
     We invite you to sail with us into the future as together we explore the furthest frontiers of space and human possibility. "  
@@ -31,7 +31,7 @@ label lucia_room:
     play sound sfx_jingle
     pause 2 
 
-    "(Directive 3….ERROR….Directive 4….CONNECTED)"
+    "(Directive 3 . . . ERROR . . . Directive 4 . . . CONNECTED)"
     "(No lifesign visuals detected. Switching to thermo-sensors.)"
     "(No biosignals detected...)"
   
@@ -40,12 +40,12 @@ label lucia_room:
     "(New Directive: Locate all remaining users and await instructions. Customer service algorithm terminated.)"
     play sound siren volume 0.25
 
-    s "....there is an emergency reported in the building. Please proceed through the nearest exit to the launch for evacuation. 
-    May I have your attention please…."
+    s "...there is an emergency reported in the building. Please proceed through the nearest exit to the launch for evacuation. 
+    May I have your attention please..."
    
     babel "?"
 
-    "(Running memory scan…No data files in memory drive detected.)"
+    "(Running memory scan...No data files in memory drive detected.)"
     "(Default Emergency Protocol voice recording activated.)"
 
     babel "Retainer 6626068 reporting in. There appears to have been an emergency evacuation of vessel 16180, also known as the PANDORA. Current location coordinates unknown. 
@@ -90,7 +90,7 @@ label lucia_room:
         #port window image here?
         "(You look out the port window. Pinpoints of light twinkle in the vast, dark void. They do not match any constellations in your database.)"
 
-        babel "There are multiple pieces of furniture inside this chamber. Cataloging now…. Bed, Sofa, Sofa #2, Dresser, Dresser #2, Dresser #3, Vanity, Holoscreen, Mirror."
+        babel "There are multiple pieces of furniture inside this chamber. Cataloging now... Bed, Sofa, Sofa #2, Dresser, Dresser #2, Dresser #3, Vanity, Holoscreen, Mirror."
 
         scene black
         show mirror base
