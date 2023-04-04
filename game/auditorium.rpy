@@ -29,7 +29,7 @@ label auditorium:
     babel "Retrieving data..."
     hide babel neutral
 
-    scene stagelights with Dissolve(0.7, alpha = True) #clean version
+    scene stagelights with Fade(0.5, 0.5, 0.5) 
 
     play sound sfx_applause volume 0.5  
     "(The audience applauds uproariously.)"
@@ -58,6 +58,7 @@ label auditorium:
     show seed at top
     pause 2
     hide seed
+    
     show kaine_smile at right with dissolve
     kaine "Please allow me to introduce..."
 
