@@ -3,6 +3,7 @@ define main = "audio/mus_main.mp3"
 define freewill = False
 define fyourself = 0
 define cap = Character("CAPTAIN", who_bold = True) 
+define c = Character("cREW", who_bold = True)
 
 #SCENE 3
 label nav_bridge:
@@ -40,37 +41,55 @@ label nav_bridge:
      babel "SOS. SOS. SOS. Accident in PANDORA. In need of rescue. SOS!"
      hide babel neutral
 
-     "(There is no response here either…you check the comm logs for information.)"
+     "(There is no response here either… you check the comm logs for information.)"
 
-     "(You find a strong signal from a few days ago. One that is only sent when a ship goes down– the dead man’s switch. 
-     Your neighbor has gone dark. There is no one on the other side.)"
+     "(You find a spike in the signals from weeks ago. One that is only sent when a ship goes down– the dead man’s switch. 
+     It’s a recording.)"
+
+     c "This is the SERAPHIM. We are reporting an ongoing incident on board." 
+
+     "(Her voice is shaky. There are strange howling noises in the background. Dogs?)"
+
+     c "We are enroute to Asteroid #KL97 on a sample retrieval mission. "
+
+     c "We have live cargo with us. And also personal animals. In seemingly random order, 
+     they’ve undergone an almost instantaneous metamorpho-"
+
+     "(There’s a sound of something like a wet explosion.)"
+
+     c "OH MY GOD, WHAT THE FUCK?!"
+
+     "(She’s screaming. You can almost hear her voice start to shred with distress.)"
+
+     c "CAPTAIN?! CAPTAIN!"
+
+     c "CA-"
+
+     "(The recording ends. She must have stopped pressing the dead man’s switch.)"
+
+     "(Your neighbor has gone dark. There is no one on the other side.)"
 
      "(You pull out the control panel. You have to increase the radius of the scope.)"
 
      if babelSprite:
-          show babel neutral
+          show babel neutral with dissolve
      babel "There has to be ships nearby. We can’t have gone that far off course."
      hide babel neutral
 
      "(The geo-locator isn’t working and you don’t recognize any of the stars through the windows.)"
 
+     show charging_station at right with dissolve
+     "(There is a bot charging terminal on the control panel, but it’s almost never used.  AI aren’t allowed inside executive rooms.)"
 
-     show charging_station
-     "(There is a bot charging terminal on the control panel, but most bots aren’t allowed in the bridge.)"
      "(It probably doesn’t have any data in it.)"
-     hide charging_station
+
      if babelSprite:
           show babel neutral
-     babel "... Might as well." 
-     hide babel neutral
-
+     babel "... Might as well."  
      "(You plug yourself in)"
-
-     if babelSprite:
-          show babel neutral
-     babel "Retrieving data....."
+     babel "Retrieving data..."
      hide babel neutral
-
+     hide charging_station
 
 label finale:
      # [Dev Notes: show navigation bridge bg clean]
@@ -102,7 +121,7 @@ label finale:
      kaine "But having just one is not enough." 
 
      show lucia smirk at left
-     lucia "We need more."
+     lucia "We need {i}ore{/i}."
 
      hide lucia smirk 
      hide kaine_smile
@@ -148,13 +167,20 @@ label finale:
                # [dev notes: must click 3 times to choose option]
                if fyourself == 2:
                     $ freewill = True
+                    if babelSprite:
+                         show babel neutral
+                    babel "Go fuck yourself."
+                    hide babel neutral
                     show lucia angry at left
                     lucia "Excuse me?"
                     show kaine_smile at right
                     "(Lucia gapes at you. Kaine just stares.)"
 
                else: #fyourself < 2
-                    "(I shouldn't say this.)"
+                    if fyourself == 1:
+                         "I shouldn't say this?"
+                    else:
+                         "(I shouldn't say this.)"
                     $ fyourself +=1
                     jump eff
 
@@ -180,7 +206,7 @@ label noahsark:
      "(Indeed. It’s Noah Williams. He must have used his high clearance to bypass the alarms. 
      You think his file mentioned some history with Kaine. Former research partners?)"
 
-     noah "You."
+     noah "{b}You.{/b}"
      hide noah_disgust
 
      "(He has a gun in hand, pointing at Kaine.)"
