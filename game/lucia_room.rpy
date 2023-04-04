@@ -121,11 +121,13 @@ label lucia_room_end:
     There is an emergency reported in the building. 
     Please proceed through the nearest exit to the launch pad for evacuation. 
     May I have your attention please…."
+    stop sound
 
     if babelSprite:
         show babel neutral
     babel "97\%...98\%...99\%..."
     babel "Reboot complete."
-    stop sound
+    play sound sfx_jingle
+    
 
     jump credits

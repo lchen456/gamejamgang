@@ -98,7 +98,7 @@ label auditorium:
         show babel neutral
     babel "My name is Babel. I am a semi-artificial intelligence developed from biohybrid tissue using the Seed of Life." 
 
-    play sound murmuring volume 0.5 
+    play sound murmuring volume 0.4 
     "(The audience explodes into hushed whispers. Could it be? Have humans finally created a being with sentience? Have humans created life?)"
 
     "(The demonstration continues. Kaine opens the discussion to the audience and you answer questions about all sorts of subjects. Famous artists. History. 
@@ -116,7 +116,7 @@ label auditorium:
 
     kaine "The future belongs to us!"
 
-    play sound sfx_applause
+    play sound sfx_applause volume 0.6
     "(The audience explodes into thunderous applause.)"
 
     # [dev visuals: bg fades to black]
@@ -138,7 +138,7 @@ label scene_a1:
     hide kaine_smile
 
     scene research_room_f
-    play sound sfx_machinery 
+    play sound sfx_machinery volume 0.6
 
     "(A lab technician stands alone. In his hands is a holo-tablet that displays a live feed of tadpoles.)"
 
