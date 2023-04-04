@@ -8,7 +8,7 @@ label dining_hall:
     
     # bg is dining hall (goo version)
     # Sound: sirens.
-    play sound sfx_siren
+    play sound sfx_siren_muffled
 
     "(You find the terminal immediately.)"
     "(It looks like this room is fairly undamaged, save for some pulsing mucus around the dining table.)"

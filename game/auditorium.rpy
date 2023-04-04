@@ -9,7 +9,7 @@ label auditorium:
 
     scene auditorium_goo
     
-    stop audio
+    stop sound
     # Sound: no siren.
 
     "(You can’t hear the siren anymore. This room is soundproof.)"
