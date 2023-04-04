@@ -61,7 +61,7 @@ label auditorium:
     show seed at top
     pause 2
     hide seed
-
+    
     show kaine_smile at right with dissolve
     kaine "Please allow me to introduce..."
 
@@ -114,7 +114,7 @@ label auditorium:
 
     kaine "The cosmos will not conquer us. Because we are the cosmos. We are the stuff of stars. This world belongs to us."
 
-    kaine "{b}The {i}future{/i} belongs to us!{/b}"
+    kaine "The future belongs to us!"
 
     play sound sfx_applause
     "(The audience explodes into thunderous applause.)"
@@ -131,21 +131,40 @@ label auditorium:
 #scene A1: auditorium backstage/lab
 label scene_a1:
 
+    scene black 
+
+    show kaine_smile 
+    kaine "Unless the Seed is on fire, I'm going to be very upset that you've pulled me out of my evening session with Babel"
+    hide kaine_smile
+
     scene research_room_f
+    play sound sfx_machinery 
 
-    lt "(hissing) The tadpoles started uncontrollably growing at the accelerated pace– even ones that weren’t in the room. 
-    Hell, some of them weren’t even in the same building!"
+    "(A lab technician stands alone. In his hands is a holo-tablet that displays a live feed of tadpoles.)"
 
-    show kaine_smile
+    lt "It’s about the latest investigation. Project CAS324."
+
+    show kaine_smile 
+    kaine "That’s the growth acceleration attempt. Did the tadpoles die?"
+    hide kaine_smile
+
+    lt "The new findings just don’t corroborate with our previous journals. We can’t publish this until we’re sure of what it is."
+    
+    lt "The tadpoles started growing uncontrollably at the accelerated pace– even the control group in a separate container. 
+    Some of the affected frogs weren’t even in the same room!"
+    
+    show kaine_smile 
     kaine "You’re saying that the Seed was able to affect a wide radius of subjects simultaneously? That’s a miracle. That’s amazing!"
     hide kaine_smile
 
     lt "I’m saying that the tadpoles were connected somehow." 
 
-    lt "That living organisms are connected somehow. And the Seed was able to work through that connection. We couldn't stop it. 
-    It could have contaminated the rest of the ecosystem. We had to kill every single one of those tadpoles, Kaine." 
+    lt "This experiment proves that living organisms are connected in a way we can’t explain. 
+    And the Seed was able to work through that connection. We couldn't stop it. It could have contaminated the rest of the ecosystem. 
+    We had to kill every single one of those tadpoles!" 
 
-    lt "This technology is too dangerous. We need to push back our timeline."
+    lt "This technology is too dangerous. 
+    Until we’re sure of how it works, we need to push back our timeline."
 
     show kaine_smile
     kaine "Are you daft? We can’t afford to slow down." 
@@ -163,6 +182,8 @@ label scene_a1:
 
     kaine "We have evolved from creations into creators. And our world is better for it."
 
+    "(Your pain sensor spikes. He’s gripping your shoulders like they were handles.)"
+
     kaine "Babel. How do you feel about your life?"
 
     #SHOW “CHOICE”
@@ -177,8 +198,7 @@ label scene_a1:
 
     "(Kaine cups your cheeks in his hands and looks at you with a pained expression.)" 
 
-
-    kaine "Look at you… you are humanity’s greatest triumph."
+    kaine "Look at you...you are humanity’s greatest triumph."
     hide kaine_smile
     hide babel neutral
 
@@ -187,6 +207,12 @@ label scene_a1:
     kaine "Handing you over to that airhead Lucia Cass felt like giving a microwave to a monkey. 
     She’ll never be able to appreciate you the way I do."
 
+    kaine "But I’m prepared to do what’s necessary. To consolidate our research funds."
+    hide kaine_smile
+
+    lt "So we sold him for money, is what you mean."
+
+    show kaine_smile
     kaine "There are two kinds of power in our world: money, and knowledge."
     kaine "The PANDORA was built to bring these two together."
     hide kaine_smile
@@ -194,20 +220,25 @@ label scene_a1:
     lt "This feels wrong." 
 
     show kaine_smile
-    kaine "Again with the feelings. You know, this is what’s wrong with your kind." 
+    kaine "Again with the {i}feelings{/i}. You know, this is what’s wrong with your kind." 
     hide kaine_smile
 
     lt "I’m sorry?"
 
+    "(You can see his badge. He's a Class-C personnel. He must be new. You consider scanning him in the database, but Kaine probably wouldn’t like that.)"
+    
     show kaine_smile
-    kaine "Incapable of appreciating the beauty of the life around us. Born with your head encased in the dirt, 
-    only waiting for the rest of the body to join you. The unlearned. The uneducated." 
+    kaine "You are incapable of appreciating Babel’s beauty. 
+    You close your eyes to the truth of creation that we seek– no. You’re blind; you never had eyes at all. 
+    I suppose not everyone can understand a {i}visionary{/i} like me." 
 
-    kaine "Do you reckon Curie was scared when she started her work?"
+    "(Kaine throws an arm around you and leads you away.)"
 
-    "(Perhaps she should have been.)"
-
-    kaine "And you will get the fuck back to work." 
+    kaine "You all were born with your heads encased in the dirt, waiting for the rest of the body to join you. The uneducated. The unlearned."
+    kaine "I hired you to clean beakers and monitor cameras. Stay in your lane" 
+    
+    "(He slams the door shut on the young man and the last thing you see was his face, staring at you with something akin to pity.)"
+    hide kaine_smile
 
     jump main_room
  
