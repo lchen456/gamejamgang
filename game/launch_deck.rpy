@@ -64,6 +64,7 @@ label launch_deck:
     noah "My head..."
 
     "(Running a database scan...User Identity confirmed.)"
+    play sound sfx_jingle
 
     "(Noah Williams. A retired PANDORA executive who resigned a few months ago. He has multiple degrees in astrobiology and plans to teach at a university when we return to Earth.)"
 
@@ -79,7 +80,6 @@ label launch_deck:
     noah "Jesus." 
     "(The user takes another moment to look you up and down. His gaze is different from the others somehow.)"
 
-   
     noah "I feel sorry for you."
     noah "You’re a monument to our depravity." 
     if babelSprite:
@@ -98,8 +98,8 @@ label launch_deck:
     hide noah_disgust
     if babelSprite:
         show babel neutral
-    "(What compelled you to say that? Running diagnostics in 3..2..1….)"
-    "(....Diagnostics indicate all functioning is unimpeded…….)"
+    "(What compelled you to say that? Running diagnostics in 3..2..1...)"
+    "(...Diagnostics indicate all functioning is unimpeded...)"
     
     babel "........"
     hide babel neutral
