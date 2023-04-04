@@ -8,6 +8,7 @@ label dining_hall:
     
     # bg is dining hall (goo version)
     # Sound: sirens.
+    play sound sfx_siren
 
     "(You find the terminal immediately.)"
     "(It looks like this room is fairly undamaged, save for some pulsing mucus around the dining table.)"
@@ -17,7 +18,9 @@ label dining_hall:
     babel "Retrieving data……"
 
     scene dining_hall_f with Fade(0.7, 2.0, 0.7, alpha=True)
+    stop sound
 
+    play sound sfx_strings 
     "(The table is laden with delicacies from every corner of the world.)"
     "(Rows upon rows of delectable dishes– gold-dusted foie gras, fresh truffles, aged caviar and a variety of meats from extinct animals.)"
 
