@@ -110,8 +110,7 @@ label lucia_room:
 
 label lucia_room_end:
     #SCENE END2
-    scene black 
-    scene lucias_bedroom_goo with Dissolve(5.0, alpha=True) # bg of lucia's room
+    scene lucias_bedroom_goo with Fade(0.5,0.5,0.5) # bg of lucia's room
     
     play sound sfx_siren volume 0.25
     pause 2 
@@ -120,7 +119,7 @@ label lucia_room_end:
     May I have your attention please. 
     There is an emergency reported in the building. 
     Please proceed through the nearest exit to the launch pad for evacuation. 
-    May I have your attention please…."
+    May I have your attention please..."
     stop sound
 
     if babelSprite:
