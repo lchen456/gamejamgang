@@ -9,6 +9,9 @@ label main_room:
     play music mus_main volume 0.8
 
     if here_before:
+        if visitAud and visitDin and visitLaunch:
+            stop music
+            play sound sfx_whispers volume 0.2
         babel "Back here again..."
         jump lobby_map
 

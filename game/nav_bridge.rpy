@@ -8,7 +8,8 @@ label nav_bridge:
      show navigation_bridge_goo
 
      #dev notes: stop siren sound, lower volume of general space track
-     play sound mus_main volume 0.3
+     stop sound
+     play sound mus_main volume 0.2 fadein 1
 
      "(The ship bridge is remarkably quiet.)"
 
@@ -469,11 +470,14 @@ label outside:
      # [Sound: breathing]
      # [Sound: heartbeat]
      play audio sfx_breathing
+     pause 1.0
      play audio sfx_heartbeat
-     play audio sfx_footsteps
-     # [footsteps]
+     pause 1.0
+     play sound sfx_footsteps
+     pause 3.0
+     stop sound
      # [Music stops]
-     stop audio 
+
      # [dev note: GOD ENDING Animation]
 
      show hand_1
@@ -509,7 +513,7 @@ label credits:
 
      $ credits_speed = 25 #scrolling speed in seconds
 
-     show logo with Fade(0.5, 0.7, 0.5) 
+     show logo with Fade(0.3, 0.3, 0.5) 
      pause 5.0
      hide logo with dissolve
      show cred at Move((0.5, 2.0), (0.5, 0.0), credits_speed, repeat=False, bounce=False, xanchor="center", yanchor="bottom")

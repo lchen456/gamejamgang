@@ -16,7 +16,7 @@ init python:
     visitDin = False
     visitLaunch = False
 
-    credits = ('Prima Sun', 'scenario'), ('Prima Sun', 'writing'),('Tiffany Chen', 'programming'), ('Tiffany Chen', 'sprites'), ('Lesley Chen', 'programming'), ('Lesley Chen', 'sprites'), ('Alex Ouyang', 'programming'), ('Alex Ouyang', 'backgrounds'), ('Eddie Jones', 'music'), ('Eddie Jones', 'sound design')
+    credits = ('Prima Sun', 'scenario'), ('Prima Sun', 'writing'), ('Prima Sun', 'misc art'),('Tiffany Chen', 'programming'), ('Tiffany Chen', 'sprites'), ('Lesley Chen', 'programming'), ('Lesley Chen', 'sprites'), ('Alex Ouyang', 'programming'), ('Alex Ouyang', 'backgrounds'), ('Eddie Jones', 'music'), ('Eddie Jones', 'sound design')
 
     credits_s = "{size=60} Credits\n"
     c1 = ''
