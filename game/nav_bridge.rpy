@@ -401,90 +401,99 @@ label nav_scene3b:
      # [Dev Notes: show navigation bridge bg dirty]
      show navigation_bridge_goo
 
-     "(You peel yourself off the control panel that you have collapsed on.)"
+     "(You’re collapsed on the floor, disconnected from the terminal.)"
 
      "(Now that you know what the goo is, the stickiness of your hair and skin is unbearable.)"
 
-     "(You feel strange inside, too.)"
+     "(You cannot fix yourself. Only an engineer can repair the damage that Noah did to your cranial processors. 
+     You thought you’d find one, but evidently you haven’t, and you probably never will.)"
 
-     "(You peel away the silicone layer of your skin to peer into your chest cavity.)"
+     "(You check your internal clock. You have around ten minutes before your two hour time limit is up.)"
 
-     "(Under the light, the viscous mucus held a red sheen as it dripped out of you.)"
+     "(There are large cracks all over the windows and walls. Small asteroid impacts, with no captain or 
+     crew to dodge them. One of them is large enough to leave a hole in the hull.)"
 
-     "(Noah was right. They pushed it too far, and now all life has reverted to its basest form.)"
+     "(You sit up, strings of the viscous mucus sliding down you and onto the floor.)"
 
-     "(You cannot help but feel like everything is a sick joke.)"
+     if babelSprite:
+          show babel fear
+     babel "Ha….haha…"
 
      "(Primordial soup. The precursor of life.)"
 
-     "(So the humans were successful after all. You were alive.)"
+     "(Noah was right. They pushed it too far, and now all life has reverted to its basest form. A rebirth borne of hubris.)"
 
-     "(There are large cracks all over the windows and walls. Small asteroid impacts, with no captain or crew to dodge them.)"
+     "(You cannot help but feel like everything is a sick joke.)"
+
+     "(You’re tired.)"
+
+     "(You were built to run on fusion energy, but you’ve been on battery reserves. "
+     "You could recharge, but the charging station is in Lucia’s room, where you first woke up.)"
 
      menu:
           "Go outside." if freewill:
                jump outside 
                
-          "Go to sleep.":
+          "Go back to charge in Lucia’s room.":
                scene black with Dissolve(1, alpha = False)
                jump credits
-
-     label outside:
-          scene black
-          # [Black screen]
-          # [Sound: breathing]
-          # [Sound: heartbeat]
-          play audio sfx_breathing
-          play audio sfx_heartbeat
-          play audio sfx_footsteps
-          # [footsteps]
-          # [Music stops]
-          stop audio 
-          # [dev note: GOD ENDING Animation]
-
-          show hand_1
-          pause 0.5
-          hide hand_1
-          show black 
-          pause 0.5
-
-          show hand_2
-          pause 0.5
-          hide hand_2
-          show black 
-          pause 0.5
-
-          show hand_3
-          pause 0.5
-          hide hand_2
-          show black 
-          pause 0.5
-
-          # [roll credits]
-          jump credits
-
-     label credits:
-          #CREDITS GO HERE
-          #scrolling credits effect credit DaFool, leon, modified by rabcor, with some edits
-          play music main 
-          scene black
-
-          image logo = "logo.png"
-          image splash = "mirror babel_goo.png" 
-          image cred = Text(credits_s, text_align=0.5)
-
-          $ credits_speed = 25 #scrolling speed in seconds
-
-          show logo with Fade(0.5, 0.7, 0.5) 
-          pause 5.0
-          hide logo with dissolve
-          show cred at Move((0.5, 2.0), (0.5, 0.0), credits_speed, repeat=False, bounce=False, xanchor="center", yanchor="bottom")
-          with Pause(credits_speed - 5)
-          show splash behind cred with dissolve 
-          with Pause(5)
-
-          stop music fadeout 1
-
-          show text "Thank you"
      return
-     
+
+label outside:
+     scene black
+     # [Black screen]
+     # [Sound: breathing]
+     # [Sound: heartbeat]
+     play audio sfx_breathing
+     play audio sfx_heartbeat
+     play audio sfx_footsteps
+     # [footsteps]
+     # [Music stops]
+     stop audio 
+     # [dev note: GOD ENDING Animation]
+
+     show hand_1
+     pause 0.5
+     hide hand_1
+     show black 
+     pause 0.5
+
+     show hand_2
+     pause 0.5
+     hide hand_2
+     show black 
+     pause 0.5
+
+     show hand_3
+     pause 0.5
+     hide hand_2
+     show black 
+     pause 0.5
+
+     # [roll credits]
+     jump credits
+
+label credits:
+     #CREDITS GO HERE
+     #scrolling credits effect credit DaFool, leon, modified by rabcor, with some edits
+     play music main 
+     scene black
+
+     image logo = "logo.png"
+     image splash = "mirror babel_goo.png" 
+     image cred = Text(credits_s, text_align=0.5)
+
+     $ credits_speed = 25 #scrolling speed in seconds
+
+     show logo with Fade(0.5, 0.7, 0.5) 
+     pause 5.0
+     hide logo with dissolve
+     show cred at Move((0.5, 2.0), (0.5, 0.0), credits_speed, repeat=False, bounce=False, xanchor="center", yanchor="bottom")
+     with Pause(credits_speed - 5)
+     show splash behind cred with dissolve 
+     with Pause(5)
+
+     stop music fadeout 1
+
+     show text "Thank you"
+     return

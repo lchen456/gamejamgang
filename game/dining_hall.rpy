@@ -140,7 +140,7 @@ label dining_hall:
     lucia "Can’t go into details, of course. NDA and all that, but we’re going to try again."
     lucia "This time, with living tissue. We still don’t have a projection for that evolutionary path, but it will change everything. "
     lucia "That’s why I’m still here."
-    lucia "The real evolution is yet to come."
+    lucia "{b}The real evolution is yet to come.{/b}"
 
     hide lucia smirk
 

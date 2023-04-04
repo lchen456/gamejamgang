@@ -138,8 +138,8 @@ label launch_deck:
     
     "(He’s gasping for breath, sweat dripping down his chin.)"
 
-    noah "It’s a circle."
+    noah "{b}It’s a circle.{/b}"
 
-    noah "Push too far, and you’ll end right where you started."
+    noah "{b}Push too far, and you’ll end right where you started.{/b}"
 
     jump main_room
