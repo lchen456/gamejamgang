@@ -58,7 +58,7 @@ label auditorium:
     show seed at top
     pause 2
     hide seed
-    
+
     show kaine_smile at right with dissolve
     kaine "Please allow me to introduce..."
 
@@ -111,7 +111,7 @@ label auditorium:
 
     kaine "The cosmos will not conquer us. Because we are the cosmos. We are the stuff of stars. This world belongs to us."
 
-    kaine "The future belongs to us!"
+    kaine "{b}The {i}future{/i} belongs to us!{/b}"
 
     play sound sfx_applause
     "(The audience explodes into thunderous applause.)"

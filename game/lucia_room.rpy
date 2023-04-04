@@ -92,8 +92,7 @@ label lucia_room:
 
         babel "There are multiple pieces of furniture inside this chamber. Cataloging now…. Bed, Sofa, Sofa #2, Dresser, Dresser #2, Dresser #3, Vanity, Holoscreen, Mirror."
 
-        scene black
-        show mirror base
+        show mirror base with Fade(0.5,0.5,0.5)
         pause 1
         show mirror
         "(The mirror is a vintage artifact from the pre-lightspeed era. It does not require fusion energy to function. You can see your reflection in it.)"
@@ -108,3 +107,24 @@ label lucia_room:
         scene black with Dissolve(0.5, alpha =True)
         return
 
+label lucia_room_end:
+    #SCENE END2
+    scene black 
+    scene lucias_bedroom_goo with Dissolve(5.0, alpha=True) # bg of lucia's room
+    
+    play sound sfx_siren volume 0.25
+    pause 2 
+
+    s "May I have your attention please...
+    May I have your attention please. 
+    There is an emergency reported in the building. 
+    Please proceed through the nearest exit to the launch pad for evacuation. 
+    May I have your attention please…."
+
+    if babelSprite:
+        show babel neutral
+    babel "97\%...98\%...99\%..."
+    babel "Reboot complete."
+    stop sound
+
+    jump credits
