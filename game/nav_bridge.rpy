@@ -1,4 +1,3 @@
-
 define freewill = False
 define fyourself = 0
 define cap = Character("CAPTAIN", who_bold = True) 
@@ -501,7 +500,7 @@ label outside:
 label credits:
      #CREDITS GO HERE
      #scrolling credits effect credit DaFool, leon, modified by rabcor, with some edits
-     play music main 
+     play sound mus_main
      scene black
 
      image logo = "logo.png"
@@ -518,7 +517,7 @@ label credits:
      show splash behind cred with dissolve 
      with Pause(5)
 
-     stop music fadeout 1
+     stop sound fadeout 2.0
 
      show text "Thank you"
      return

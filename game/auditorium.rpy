@@ -138,7 +138,7 @@ label scene_a1:
     hide kaine_smile
 
     scene research_room_f
-    play sound sfx_machinery volume 0.6
+    play sound sfx_machinery volume 0.4
 
     "(A lab technician stands alone. In his hands is a holo-tablet that displays a live feed of tadpoles.)"
 
