@@ -59,7 +59,7 @@ label auditorium:
 
     # [Show object asset *Seed of Life*]
     show seed at top
-    pause 2
+    "(The Seed of Life.)"
     hide seed
     
     show kaine_smile at right with dissolve
@@ -236,9 +236,11 @@ label scene_a1:
 
     kaine "You all were born with your heads encased in the dirt, waiting for the rest of the body to join you. The uneducated. The unlearned."
     kaine "I hired you to clean beakers and monitor cameras. Stay in your lane" 
+    hide kaine_smile
     
     "(He slams the door shut on the young man and the last thing you see was his face, staring at you with something akin to pity.)"
-    hide kaine_smile
+
+    stop sound fadeout 0.5
 
     jump main_room
  

@@ -20,7 +20,7 @@ label dining_hall:
     scene dining_hall_f with Fade(0.7, 2.0, 0.7, alpha=True)
     stop sound
 
-    play sound sfx_strings 
+    play sound sfx_strings loop
     "(The table is laden with delicacies from every corner of the world.)"
     "(Rows upon rows of delectable dishes– gold-dusted foie gras, fresh truffles, aged caviar and a variety of meats from extinct animals.)"
 
@@ -58,7 +58,7 @@ label dining_hall:
     else:
         show lucia smirk
 
-    "Babel’s a major part of my life here– the best part, if I’m being honest."
+    lucia "Babel’s a major part of my life here– the best part, if I’m being honest."
 
     cw "Your companion was gifted to you by PANDORA as a part of your contract, correct?"
 
@@ -152,5 +152,6 @@ label dining_hall:
 
     lucia "Hahaha, yes! Next time I’ll ask them to make a girl. We’ll have a complete set!"
 
+    stop sound fadeout 0.5
     # fade to black
     jump main_room
